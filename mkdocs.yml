@@ -1,0 +1,99 @@
+site_name: Sol's Leveling System
+site_description: The complete player guide to levels, aptitude builds, passive trees, combat masteries, and server configuration.
+site_url: https://markmochi.github.io/sols-leveling-system-wiki/
+copyright: Sol's Leveling System v1.0.0 Adventurer's Codex
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  favicon: assets/images/leveling-crest.svg
+  logo: assets/images/leveling-crest.svg
+  font: false
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+
+plugins:
+  - search:
+      separator: '[\\s\\-\\.]+'
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/stylesheets/codex.css
+
+extra_javascript:
+  - assets/javascripts/leveling-tools.js
+
+extra:
+  generator: false
+  social: []
+
+nav:
+  - Adventurer's Codex: index.md
+  - Start Here:
+      - Install the mod: getting-started/installation.md
+      - First ten minutes: getting-started/quick-start.md
+      - The leveling screen: getting-started/interface.md
+  - Progression:
+      - Player Level & EXP: progression/player-levels.md
+      - Aptitudes & respecs: progression/aptitudes.md
+      - Combat Masteries: progression/masteries.md
+      - Active Survival: progression/survival.md
+  - Aptitude Grimoire:
+      - Choose a path: aptitudes/index.md
+      - HP - Vitality: aptitudes/vitality.md
+      - DEF - Fortitude: aptitudes/fortitude.md
+      - DEX - Dexterity: aptitudes/dexterity.md
+      - INT - Intellect: aptitudes/intellect.md
+      - LUCK - Fortune: aptitudes/fortune.md
+      - Limit Breaker: aptitudes/limit-breaker.md
+  - Builds:
+      - Buildcrafting: builds/buildcrafting.md
+      - Guild Ledger: builds/planner.md
+  - Reference:
+      - Mastery passive trees: reference/mastery-passives.md
+      - EXP tables: reference/xp-tables.md
+      - Compatibility: reference/compatibility.md
+      - FAQ & troubleshooting: reference/troubleshooting.md
+  - Server Owners:
+      - Configuration: admin/configuration.md
+      - Commands: admin/commands.md
+      - Datapacks & tags: admin/datapacks.md
+  - Release Notes: changelog.md
+

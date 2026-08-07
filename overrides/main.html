@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  <div class="codex-rail" role="note" aria-label="Supported Minecraft versions">
+    <a class="codex-rail__seal" href="{{ 'changelog/' | url }}">SLS v1.0.0</a>
+    <span><b>Forge</b> 1.16.5</span>
+    <span><b>Forge</b> 1.20.1</span>
+    <span><b>NeoForge</b> 1.21.1</span>
+    <span class="codex-rail__note">Client + server</span>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  <footer class="codex-footer">
+    <img src="{{ 'assets/images/leveling-crest.svg' | url }}" alt="" width="38" height="38">
+    <div>
+      <strong>Sol's Leveling System Adventurer's Codex</strong>
+      <small>Level. Specialize. Master your path.</small>
+    </div>
+  </footer>
+{% endblock %}
+

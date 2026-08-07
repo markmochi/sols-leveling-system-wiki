@@ -1,0 +1,6 @@
+Primary (159 characters):
+A server-authoritative Minecraft RPG leveling mod with five aptitude trees, 25 ranked passives, combat masteries, buildcrafting, and anti-farm progression.
+
+Compact (99 characters):
+RPG player levels, five stat trees, 25 ranked passives, combat masteries, and buildcrafting.
+

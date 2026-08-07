@@ -4,6 +4,14 @@
 
 Fight dangerous creatures, survive hostile territory, specialize your character, and master the combat styles you actually use. Stronger modded enemies can grant more progress, while repeated farms, overkill, summoned targets, and invalid damage paths are controlled by server-side anti-exploit rules.
 
+## Open the Leveling Screen
+
+Press **Y** while playing to open the Leveling Screen. This is the default keybind on every supported edition.
+
+You can also open your inventory and click the **Open Leveling** crest beside it. If another mod already uses Y, change **Open Leveling Screen** in Minecraft's Controls menu under **Sol's Leveling System**.
+
+The Leveling Screen contains your Player Level and EXP progress, available Aptitude Points, stat previews, Aptitude allocation, ranked Passives, Combat Masteries, recent EXP sources, and confirmation prompts.
+
 ## Main features
 
 - Player Levels 1–50 and a 150-point Aptitude budget.

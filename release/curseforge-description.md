@@ -4,6 +4,14 @@
 
 Fight dangerous creatures, stay active in hostile territory, specialize your stats, and master the combat styles you actually use. The system is designed for both vanilla and modded adventures: stronger enemies are worth more, repeated farms lose value, and final effective damage—not overkill—drives mastery progress.
 
+## Open the Leveling Screen
+
+Press **Y** while playing to open the Leveling Screen. This is the default keybind on every supported edition.
+
+You can also open your inventory and click the **Open Leveling** crest beside it. If another mod already uses Y, change **Open Leveling Screen** in Minecraft's Controls menu under **Sol's Leveling System**.
+
+The Leveling Screen contains your Player Level and EXP progress, available Aptitude Points, stat previews, Aptitude allocation, ranked Passives, Combat Masteries, recent EXP sources, and confirmation prompts.
+
 ## Core features
 
 - **Player Levels 1–50** with a paced, long-term EXP curve.

@@ -1,6 +1,9 @@
 site_name: Sol's Leveling System
 site_description: The complete player guide to levels, aptitude builds, passive trees, combat masteries, and server configuration.
 site_url: https://markmochi.github.io/sols-leveling-system-wiki/
+repo_url: https://github.com/markmochi/sols-leveling-system-wiki
+repo_name: GitHub
+edit_uri: ""
 copyright: Sol's Leveling System v1.0.0 Adventurer's Codex
 
 theme:
@@ -91,9 +94,9 @@ nav:
       - EXP tables: reference/xp-tables.md
       - Compatibility: reference/compatibility.md
       - FAQ & troubleshooting: reference/troubleshooting.md
+      - Report a bug: reference/reporting-issues.md
   - Server Owners:
       - Configuration: admin/configuration.md
       - Commands: admin/commands.md
       - Datapacks & tags: admin/datapacks.md
   - Release Notes: changelog.md
-

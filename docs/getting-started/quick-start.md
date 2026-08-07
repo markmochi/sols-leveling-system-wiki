@@ -80,4 +80,4 @@ Hover the item to see its classification. Training targets, owned creatures, ove
 - **Testing on the same farm forever:** repetition credit intentionally decays and refills over time.
 - **Respeccing during combat:** allocation changes are blocked for 10 seconds after combat by default.
 
-<div class="codex-callout"><strong>Recommended next chapter:</strong> read <a href="../progression/aptitudes/">Aptitudes & respecs</a>, then study only the one or two passive trees you plan to use.</div>
+<div class="codex-callout"><strong>Recommended next chapter:</strong> read <a href="../../progression/aptitudes/">Aptitudes & respecs</a>, then study only the one or two passive trees you plan to use.</div>

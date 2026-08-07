@@ -1,0 +1,156 @@
+name: Bug report
+description: Report a reproducible problem with Sol's Leveling System
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Sol's Leveling System. Complete every required field and remove private information from logs before uploading them.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and did not find the same problem.
+          required: true
+        - label: I read the wiki's troubleshooting and bug-report guides.
+          required: true
+        - label: I reproduced the problem after restarting the game or server.
+          required: true
+
+  - type: dropdown
+    id: minecraft
+    attributes:
+      label: Minecraft version
+      options:
+        - 1.16.5
+        - 1.20.1
+        - 1.21.1
+        - Other / unsupported
+    validations:
+      required: true
+
+  - type: input
+    id: loader
+    attributes:
+      label: Mod loader and version
+      description: Include Forge or NeoForge and its complete version number.
+      placeholder: "NeoForge 21.1.229"
+    validations:
+      required: true
+
+  - type: input
+    id: leveling_version
+    attributes:
+      label: Sol's Leveling System version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does the bug occur?
+      multiple: true
+      options:
+        - Singleplayer
+        - LAN world
+        - Dedicated server
+        - Client only / visual
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Affected system
+      options:
+        - Player Level or Player EXP
+        - Aptitudes or respecs
+        - Aptitude passive
+        - STR, Weapon, or Range Mastery
+        - Mastery passive or hand mining
+        - Active Survival
+        - Limit Breaker
+        - Interface, HUD, sound, or keybind
+        - Compatibility, command, config, or datapack
+        - Crash or startup
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Explain the actual result and what you expected instead.
+      placeholder: "Actual result:\n\nExpected result:"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Give the shortest numbered sequence that causes the problem.
+      placeholder: "1. Join the world...\n2. Open the leveling screen...\n3. Perform the action...\n4. Observe..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: progression
+    attributes:
+      label: Relevant progression state
+      description: Include Player Level, aptitude ranks, passive rank/toggle, Mastery levels, and cooldown state when relevant. Server owners may attach a redacted audit result.
+      placeholder: "Player Level 30; HP 20; Recuperation II enabled; Weapon Mastery 14"
+    validations:
+      required: true
+
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods, modpack, and datapacks
+      description: Give the exact modpack/version or attach a mod list. Mention Sol's companion mods and custom datapacks.
+      placeholder: "Modpack and version, or attach a mod list"
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration changes
+      description: List relevant common/client config changes or write "None."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and crash report
+      description: Drag latest.log or the matching crash report here. Remove tokens, IP addresses, and other private data first.
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or video
+      description: Show the full leveling screen, passive details, HUD state, item tooltip, or relevant encounter when possible.
+
+  - type: textarea
+    id: minimal_test
+    attributes:
+      label: Minimal-mod test
+      description: Does it still happen with only Sol's Leveling System and required loader components? If not tested, explain why.
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Add anything else that may help reproduce the problem.
+

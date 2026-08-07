@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+{% block content %}
+  <section class="lost-page">
+    <div class="lost-page__sigil" aria-hidden="true">404</div>
+    <p class="lost-page__eyebrow">The trail ends here</p>
+    <h1>This page slipped beyond the map.</h1>
+    <p>The link may be outdated, or the requested chapter may have moved deeper into the Codex.</p>
+    <div class="codex-actions">
+      <a class="codex-button" href="{{ config.site_url }}">Return to the Codex</a>
+      <a class="codex-button codex-button--ghost" href="{{ config.site_url }}reference/reporting-issues/">Report a broken link</a>
+    </div>
+  </section>
+{% endblock %}
+

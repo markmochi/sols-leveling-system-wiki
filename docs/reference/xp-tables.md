@@ -1,6 +1,6 @@
 # EXP tables
 
-These values use the default v1.0.0 formulas and round each next-level requirement to the nearest ten.
+These values use the public formulas and round each next-level requirement to the nearest ten.
 
 ## Player Level
 
@@ -42,4 +42,3 @@ Total EXP to reach mastery level 30: **156,640 per mastery**
 
 !!! note "Server configuration"
     Server owners can change level caps and other progression settings. The in-game interface is authoritative for a customized server.
-

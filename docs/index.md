@@ -17,12 +17,15 @@ hide:
     </div>
   </div>
   <div class="attribute-wheel" aria-label="The five aptitude paths">
-    <div class="attribute-wheel__core">SLS</div>
-    <div class="attribute-rune attribute-rune--hp"><span>HP</span></div>
-    <div class="attribute-rune attribute-rune--def"><span>DEF</span></div>
-    <div class="attribute-rune attribute-rune--dex"><span>DEX</span></div>
-    <div class="attribute-rune attribute-rune--int"><span>INT</span></div>
-    <div class="attribute-rune attribute-rune--luck"><span>LUCK</span></div>
+    <div class="attribute-wheel__orbit attribute-wheel__orbit--outer" aria-hidden="true"></div>
+    <div class="attribute-wheel__orbit attribute-wheel__orbit--inner" aria-hidden="true"></div>
+    <div class="attribute-wheel__pulse" aria-hidden="true"></div>
+    <a class="attribute-wheel__core" href="aptitudes/" aria-label="Open the Aptitude Grimoire">SLS</a>
+    <a class="attribute-rune attribute-rune--hp" href="aptitudes/vitality/" aria-label="Study HP Vitality"><span>HP</span></a>
+    <a class="attribute-rune attribute-rune--def" href="aptitudes/fortitude/" aria-label="Study DEF Fortitude"><span>DEF</span></a>
+    <a class="attribute-rune attribute-rune--dex" href="aptitudes/dexterity/" aria-label="Study DEX Dexterity"><span>DEX</span></a>
+    <a class="attribute-rune attribute-rune--int" href="aptitudes/intellect/" aria-label="Study INT Intellect"><span>INT</span></a>
+    <a class="attribute-rune attribute-rune--luck" href="aptitudes/fortune/" aria-label="Study LUCK Fortune"><span>LUCK</span></a>
   </div>
 </section>
 
@@ -50,7 +53,7 @@ hide:
 
 ## What the Codex covers
 
-- Minecraft **1.16.5 Forge**, **1.20.1 Forge**, and **1.21.1 NeoForge**
+- Supported Forge and NeoForge editions, with exact requirements in [Installation](getting-started/installation.md)
 - Player EXP, mob reward logic, contribution sharing, anti-farm behavior, and Active Survival
 - All five Aptitudes, all 25 Aptitude Passives, and exact rank requirements
 - STR, WEAPON, and RANGE Masteries plus all 18 milestone passives
@@ -60,4 +63,4 @@ hide:
 - Server configuration, commands, reconciliation, troubleshooting, and safe testing
 
 !!! info "Default rules"
-    Numbers in this Codex use Sol's Leveling System v1.0.0 defaults. Servers can change caps, progression resources, passive Player-Level gates, anti-farm rules, and classifications.
+    Numbers in this Codex use the public default rules. Servers can change caps, progression resources, passive Player-Level gates, anti-farm rules, and classifications.

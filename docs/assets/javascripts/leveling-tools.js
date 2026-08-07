@@ -41,7 +41,7 @@
       var fn = kind === "player" ? playerRequirement : masteryRequirement;
       var needed = cumulative(fn, to) - cumulative(fn, from);
       result.dataset.state = "success";
-      result.innerHTML = "<strong>" + format(needed) + " " + (kind === "player" ? "Player EXP" : "Mastery EXP") + "</strong><br><small>From the start of level " + from + " to the start of level " + to + " under default v1.0.0 rules.</small>";
+      result.innerHTML = "<strong>" + format(needed) + " " + (kind === "player" ? "Player EXP" : "Mastery EXP") + "</strong><br><small>From the start of level " + from + " to the start of level " + to + " under the public default rules.</small>";
     });
   }
 

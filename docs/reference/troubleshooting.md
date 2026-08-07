@@ -42,7 +42,7 @@ Check that the passive rank is enabled, the opponent is a recognized boss/elite/
 
 ## My numbers differ from this wiki
 
-This wiki documents public v1.0.0 defaults. Servers can change caps, gates, multipliers, and feature switches. Ask the server owner for its common config and datapacks.
+This wiki documents the public defaults. Servers can change caps, gates, multipliers, and feature switches. Ask the server owner for its common config and datapacks.
 
 ## Server-owner diagnosis
 

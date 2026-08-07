@@ -1,6 +1,6 @@
 # Sol's Leveling System Adventurer's Codex
 
-The complete player and server-owner guide for Sol's Leveling System v1.0.0.
+The complete player and server-owner guide for Sol's Leveling System.
 
 ## [Open the Adventurer's Codex](https://markmochi.github.io/sols-leveling-system-wiki/)
 
@@ -28,11 +28,7 @@ Remove access tokens, server addresses, player IP addresses, personal paths, and
 - Limit Breaker, Active Survival, compatibility, commands, and datapacks
 - Server configuration, troubleshooting, and safe progression reconciliation
 
-## Supported versions
-
-- Minecraft 1.16.5 — Forge
-- Minecraft 1.20.1 — Forge
-- Minecraft 1.21.1 — NeoForge
+Exact Minecraft, loader, and Java requirements are maintained in the [installation guide](https://markmochi.github.io/sols-leveling-system-wiki/getting-started/installation/).
 
 ## Local preview
 

@@ -1,6 +1,6 @@
 # Guild Ledger
 
-Draft a build before spending vanilla XP on a respec. The ledger uses the default v1.0.0 level curve, 150-point budget, aptitude caps, base bonuses, and passive gates.
+Draft a build before spending vanilla XP on a respec. The ledger uses the public level curve, 150-point budget, aptitude caps, base bonuses, and passive gates.
 
 ## Build ledger
 

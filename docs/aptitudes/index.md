@@ -30,6 +30,6 @@ Every path offers a direct stat and five active gameplay passives. The default 1
 
 Gate pairs use `Aptitude / Player` order. For example, `20 / 10` means you need rank 20 in that Aptitude and Player Level 10 for that passive rank.
 
-All values are defaults for v1.0.0. Servers can change the Player-Level gate list, but Aptitude gates and passive effects come from the installed mod's active rules.
+All values use the public defaults. Servers can change the Player-Level gate list, but Aptitude gates and passive effects come from the installed mod's active rules.
 
 <div class="codex-callout"><strong>Passive ranks are free.</strong> Meeting a gate lets you claim the rank without spending another currency. Aptitude Points are spent only on the five main Aptitude ranks.</div>

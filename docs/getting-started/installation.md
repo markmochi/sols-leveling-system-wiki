@@ -24,7 +24,7 @@ Sol's Leveling System is required on **both sides** in multiplayer: install it o
 2. Download the Sol's Leveling System file for that exact Minecraft version.
 3. Place the JAR in the instance or server `mods` folder.
 4. Start the game or server once.
-5. On a client, join a world and press ++y++ or use the crest beside the inventory to open the Leveling screen.
+5. On a client, join a world and press ++y++ or use the native Leveling inventory tab to open the Leveling screen.
 
 There are **no required content-mod dependencies**. Optional companion integrations activate only when their matching mod is present.
 
@@ -33,13 +33,14 @@ There are **no required content-mod dependencies**. Optional companion integrati
 Player progression is versioned and migrated by the server. Player Level, Aptitude allocation, passive levels and toggles, Masteries, cooldowns, and other persistent progression are stored with the player.
 
 - Back up the world before any mod update.
-- Replace only the old Sol's Leveling System JAR.
+- Replace the old Sol's Leveling System JAR on the server and every client.
+- Do not mix the final public v1.0.3 file with an earlier prerelease JAR that also reported v1.0.3; the synchronized rules payload now uses protocol 21 and requires matching builds on both sides.
 - Do not delete player data or the world config to “refresh” progression.
 - Check the latest server log for a clean rules load.
 - If caps or Aptitude rules changed, use the [reconciliation preview](../admin/commands.md#safe-reconciliation) before applying any destructive correction.
 
 !!! note "Death is not a character reset"
-    Normal death preserves Player EXP, Aptitudes, passive purchases, Masteries, and cooldowns. It resets the Active Survival streak. INT's Memory passive separately controls how much ordinary Minecraft Experience is retained.
+    Normal death preserves Player EXP, Aptitudes, passive purchases, Masteries, and persistent cooldowns. On Forge, v1.0.3 also keeps a pre-death recovery copy if the player disconnects or the server stops before respawn. Active Survival resets; INT's Memory passive separately controls ordinary Minecraft Experience retention.
 
 ## Configuration locations
 
@@ -53,4 +54,3 @@ Existing TOML files keep previously saved values when defaults change. Compare a
 ## Next step
 
 Continue to the [first ten minutes](quick-start.md) and make your first informed allocation.
-

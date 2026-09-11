@@ -73,7 +73,7 @@ This allows milestone combinations to matter without letting several conditional
 
 ## STR hand-mining training
 
-Unlocked Ore Breaker nodes let empty hands harvest supported ore tags through normal loot tables. Only successfully broken, naturally generated tracked ore can grant STR Mastery EXP.
+Unlocked Ore Breaker nodes let empty hands harvest supported blocks through normal loot tables. Ore Breaker I includes common stone-family blocks as well as common ores. Only successfully broken, naturally generated tracked ore can grant STR Mastery EXP; ordinary stone can be harvested but does not become a Mastery farm.
 
 - Each eligible block grants 0.1 STR Mastery EXP.
 - Player-placed ore grants none.
@@ -82,4 +82,3 @@ Unlocked Ore Breaker nodes let empty hands harvest supported ore tags through no
 - Disabling a required passive immediately removes that ore tier.
 
 See [Mastery passive trees](../reference/mastery-passives.md) for every milestone and exact condition.
-

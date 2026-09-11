@@ -2,7 +2,7 @@
 
 ## How do I open the leveling screen?
 
-Press ++y++ by default, click the crest in your inventory, or run `/sol leveling open`. Change the key in Minecraft's Controls menu if another mod already uses Y.
+Press ++y++ by default, use the native Leveling inventory tab, or run `/sol leveling open`. Press the configured key again to close the screen. Change the key in Minecraft's Controls menu if another mod already uses Y; the toggle follows the rebound key.
 
 ## Why did a kill grant less EXP?
 
@@ -22,7 +22,19 @@ No. Aptitude points raise HP, DEF, DEX, INT, or LUCK. Once both gates are met, p
 
 ## Do I lose progression when I die?
 
-Player EXP, aptitude allocations, claimed passives, and combat masteries persist through ordinary death. Active Survival streak state resets. On a multiplayer server, the server's saved player data is authoritative.
+Player EXP, aptitude allocations, claimed passives, combat masteries, and persistent cooldowns persist through ordinary death. Active Survival resets. On Forge v1.0.3, the pre-death recovery also survives a disconnect or server restart before respawn. On a multiplayer server, the server's saved player data is authoritative.
+
+## Why is the screen stuck on “Loading progression” or showing Level 1?
+
+Update the server and every client to the matching v1.0.3 file. The release fixes stale progression after dimension travel, death, revive flows, or reconnecting inside another dimension, including offline-mode servers where a client's profile UUID differs from the server-authoritative UUID. If the problem remains, capture the server log, client log, Minecraft edition, loader, dimension, and exact reconnect/death sequence.
+
+## Why did progression stop after changing dimensions?
+
+v1.0.3 fixes invalidated Forge progression state and stale client identity after Nether or modded-dimension travel. Update both sides. Mob damage tracking, kill EXP, Mastery progress, and admin commands should continue without rejoining; report the exact dimension provider and logs if they do not.
+
+## Why did a passive disappear after enabling Long Progression Mode?
+
+Long Progression Mode restores the original higher Aptitude-rank and Player-Level gates. A purchased passive that no longer meets both gates is removed by the normal rules check, but costs no Aptitude Points to claim again once eligible. Earned Player EXP and Aptitude allocations are not reset.
 
 ## Why did my screen close during combat?
 
@@ -42,7 +54,7 @@ Check that the passive rank is enabled, the opponent is a recognized boss/elite/
 
 ## My numbers differ from this wiki
 
-This wiki documents the public defaults. Servers can change caps, gates, multipliers, and feature switches. Ask the server owner for its common config and datapacks.
+This wiki documents the v1.0.3 balanced defaults. Servers can enable Long Progression Mode or change caps, gates, multipliers, and feature switches. Ask the server owner for its common config and datapacks.
 
 ## Server-owner diagnosis
 

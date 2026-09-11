@@ -8,13 +8,13 @@ Fight dangerous creatures, stay active in hostile territory, specialize your sta
 
 Press **Y** while playing to open the Leveling Screen. This is the default keybind on every supported edition.
 
-You can also open your inventory and click the **Open Leveling** crest beside it. If another mod already uses Y, change **Open Leveling Screen** in Minecraft's Controls menu under **Sol's Leveling System**.
+You can also open your inventory and use the native **Leveling** tab. Press the configured key again to close the screen; the toggle continues to work after rebinding it in Minecraft's Controls menu.
 
 The Leveling Screen contains your Player Level and EXP progress, available Aptitude Points, stat previews, Aptitude allocation, ranked Passives, Combat Masteries, recent EXP sources, and confirmation prompts.
 
 ## Core features
 
-- **Player Levels 1–50** with a paced, long-term EXP curve.
+- **Player Levels 1–50** with a balanced 73,500-EXP default journey and optional Long Progression Mode for the original 112,670-EXP curve and passive gates.
 - **150 Aptitude Points** by the default level cap: enough to master three of five Aptitudes or create a flexible hybrid.
 - **Five Aptitude trees:** HP – Vitality, DEF – Fortitude, DEX – Dexterity, INT – Intellect, and LUCK – Fortune.
 - **25 ranked Aptitude Passives** with clear Player Level and Aptitude requirements.
@@ -31,9 +31,9 @@ Every Aptitude grants a direct stat benefit and unlocks its own passive tree:
 
 - **HP – Vitality:** up to +22 Max HP, stronger healing, overheal barriers, underwater endurance, hazard resistance, and Last Resort death protection.
 - **DEF – Fortitude:** Armor, Toughness, knockback resistance, reduced armor wear, Guarded, low-health protection, and damage-type Adaptation.
-- **DEX – Dexterity:** Movement Speed, lower sprint/jump exhaustion, faster climbing, better movement while using items, Ender Pearl Return Marks, and Flow State.
+- **DEX – Dexterity:** Movement Speed and Attack Speed, lower sprint/jump exhaustion, faster climbing, better movement while using items, Ender Pearl Return Marks, and Flow State.
 - **INT – Intellect:** more Minecraft Experience from collected orbs, longer beneficial effects, merchant discounts, Night Eye, creature knowledge, and retained lost XP after death.
-- **LUCK – Fortune:** Loot Luck, compatible status-roll improvement, kill-based healing and drop duplication, Fortunate Criticals or Bad Luck, Overconfidence's Ego, and the high-risk Limit Breaker capstone.
+- **LUCK – Fortune:** a chance for an additional full chest, fishing, or mob loot-table roll; compatible state-roll improvement; kill-based healing and drop duplication; Fortunate Criticals or Bad Luck; Ego; and Limit Breaker.
 
 Unused Aptitude Points can be spent freely. Reclaiming confirmed ranks costs raw Minecraft Experience points and is blocked briefly after combat, so builds can evolve without making choices meaningless. Aptitude passive ranks cost no points: once both requirements are met, claim them in the passive tree. Every passive can be toggled individually.
 
@@ -65,9 +65,9 @@ Sol's Leveling System must be installed on **both the server and each connecting
 
 Optional integrations include:
 
-- **Sol's Party System:** conserved Player EXP sharing for nearby, active party members.
+- **Sol's Party System:** conserved Player EXP sharing that always includes direct kill contributors while validating nearby non-contributing party recipients.
 - **Sol's Title System:** level and title-friendly player nameplates.
-- **Sol's Relic System:** compatible Fortunate Critical handling.
+- **Sol's Relic System:** compatible Fortunate Critical handling and one shared Loot Luck bonus roll when expanded Luck support is available.
 - Built-in classification and encounter support for several popular combat and adventure mods, plus tags and JSON overrides for modpack authors.
 
 ## Supported versions

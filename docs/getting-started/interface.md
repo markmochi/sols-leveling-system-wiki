@@ -5,20 +5,21 @@ description: Controls, pages, previews, notifications, nameplates, and accessibi
 
 # The leveling screen
 
-The parchment screen is a live, server-backed character sheet. Values shown in parentheses are bonuses from Sol's Leveling System; the current-build panel also includes the resulting health, armor, toughness, movement, XP-orb gain, and Luck.
+The parchment screen is a live, server-backed character sheet. Values shown in parentheses are bonuses from Sol's Leveling System; the current-build panel also includes the resulting health, armor, toughness, movement speed, attack speed, XP-orb gain, Luck, and Fortune bonus-roll chance.
 
 ## Open and navigate
 
 - Press ++y++ by default.
-- Click **Open Leveling** beside the inventory.
+- Use the native Leveling tab in the inventory.
 - Run `/sol leveling open`.
 - Use tabs or number keys to switch Overview, Aptitudes, and Masteries.
 - Use ++tab++ and ++shift+tab++ to move keyboard focus.
 - Use ++enter++ or ++space++ to activate the focused control.
 - Use arrow keys, Page Up/Page Down, or the mouse wheel to scroll.
 - Press ++escape++ to close a confirmation first, then the screen.
+- Press the configured Leveling key again to close the screen as a true toggle.
 
-The keybind can be changed in Minecraft Controls. The inventory crest can be hidden or repositioned in the client config.
+The toggle follows the key assigned in Minecraft Controls, including rebound keys. In Survival, Leveling occupies the second native-style tab after the player inventory when installed alone; reserved Sol tabs keep compatible modded tabs from overlapping it. In Creative, Leveling sits above Destroy Item when used alone and stacks above Sol's Title System when both are present.
 
 ## Three main pages
 
@@ -64,9 +65,8 @@ Other players see `[Lvl N]` before your nameplate. When Sol's Title System is pr
 
 | Group | Options |
 |---|---|
-| Screen | inventory crest visibility and X/Y offsets; high contrast |
+| Screen | inventory Leveling-tab visibility and X/Y offsets; high contrast |
 | Notifications | anchor, scale, duration, sound, chat mirror, reduced motion |
 | Passive visuals | particle density and per-tick particle budget |
 
 These options never change server calculations or grant an advantage. Reduced motion and particle density affect presentation only.
-

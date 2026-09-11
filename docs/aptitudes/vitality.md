@@ -22,11 +22,13 @@ The first eight ranks are highly efficient. Later ranks deliberately trade small
 
 | Passive | Gates by passive level (`HP / Player`) | Effect range |
 |---|---|---|
-| Recuperation | `10/3 · 18/9 · 26/17 · 34/27 · 42/39` | +5% → +32% healing received |
-| Vital Overflow | `20/7 · 25/14 · 30/22 · 35/31 · 40/42` | 20% → 100% overheal conversion; 2% → 10% Max-HP barrier cap |
-| Enduring Breath | `30/15 · 34/22 · 38/30 · 43/39 · 48/47` | +20% → +100% effective underwater air duration |
-| Adaptive Physique | `35/25 · 39/31 · 43/37 · 47/44 · 50/50` | 6% → 25% persistent-hazard reduction |
-| Last Resort | `40/35 · 41/37 · 42/39 · 43/41 · 44/43 · 45/45 · 46/46 · 47/47 · 48/49 · 50/50` | 5 → 30 Absorption HP; 2s → 10s; 300s → 120s cooldown |
+| Recuperation | `6/3 · 12/7 · 20/12 · 28/19 · 36/28` | +5% → +32% healing received |
+| Vital Overflow | `12/6 · 18/10 · 24/16 · 30/23 · 36/32` | 20% → 100% overheal conversion; 2% → 10% Max-HP barrier cap |
+| Enduring Breath | `16/8 · 22/13 · 28/19 · 34/26 · 40/34` | +20% → +100% effective underwater air duration |
+| Adaptive Physique | `24/16 · 29/22 · 34/28 · 39/35 · 45/42` | 6% → 25% persistent-hazard reduction |
+| Last Resort | `30/24 · 32/26 · 34/28 · 36/30 · 38/33 · 40/36 · 41/38 · 42/40 · 44/43 · 45/45` | 5 → 30 Absorption HP; 2s → 10s; 300s → 120s cooldown |
+
+These are the v1.0.3 balanced defaults. Long Progression Mode restores the original, higher gate pairs.
 
 ## Recuperation
 
@@ -91,9 +93,8 @@ Last Resort triggers when valid damage crosses below 10% Max HP or would otherwi
 
 ## Build notes
 
-- **HP 8** is an efficient splash for almost any early build, but it unlocks no Vitality passive by itself.
-- **HP 20–30** begins the healing/barrier core but still misses the high-end survival tools.
-- **HP 40–42** supports a strong sustain hybrid with Recuperation, Vital Overflow, and the first Last Resort level.
-- **HP 50** is a true specialist investment for maximum Adaptive Physique and Last Resort.
+- **HP 6–12** is an efficient early splash that opens Recuperation and then Vital Overflow.
+- **HP 24–30** reaches Adaptive Physique and the first Last Resort level.
+- **HP 40–45** supports a complete sustain specialist with every passive family and the deepest Last Resort ranks.
+- **HP 50** remains the maximum direct-health investment, although the balanced passive tree completes at HP 45.
 - Recuperation and Vital Overflow directly synergize: stronger valid healing creates more potential excess after health is filled.
-

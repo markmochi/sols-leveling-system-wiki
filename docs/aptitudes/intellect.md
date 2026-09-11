@@ -13,8 +13,8 @@ Extends beneficial, non-instant potion effects. Instant Health and other instant
 
 | Rank | 1 | 2 | 3 | 4 | 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| INT required | 5 | 12 | 20 | 30 | 40 |
-| Player Level | 5 | 11 | 19 | 30 | 42 |
+| INT required | 4 | 10 | 18 | 26 | 34 |
+| Player Level | 3 | 7 | 12 | 20 | 29 |
 | Duration | +5% | +10% | +15% | +20% | +25% |
 
 ## Merchant's Wit
@@ -23,8 +23,8 @@ Reduces the primary emerald cost after vanilla demand, reputation, and other pri
 
 | Rank | 1 | 2 | 3 | 4 | 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| INT required | 12 | 20 | 28 | 36 | 45 |
-| Player Level | 10 | 18 | 27 | 37 | 47 |
+| INT required | 10 | 16 | 23 | 30 | 38 |
+| Player Level | 6 | 11 | 17 | 25 | 34 |
 | Discount | 5% | 8% | 12% | 16% | 25% |
 
 ## Night Eye
@@ -33,11 +33,11 @@ Adapts your vision in darkness at raw light level 7 or lower. It uses its own vi
 
 | Rank | INT / Level | Adapt time | Vision duration |
 | ---: | ---: | ---: | ---: |
-| 1 | 30 / 20 | 10s | 60s |
-| 2 | 35 / 28 | 8s | 90s |
-| 3 | 40 / 36 | 6s | 5m |
-| 4 | 45 / 43 | 3s | 10m |
-| 5 | 50 / 50 | Immediate | Continuous in qualifying darkness |
+| 1 | 16 / 10 | 10s | 60s |
+| 2 | 22 / 16 | 8s | 90s |
+| 3 | 28 / 23 | 6s | 5m |
+| 4 | 34 / 31 | 3s | 10m |
+| 5 | 40 / 40 | Immediate | Continuous in qualifying darkness |
 
 At rank V, Night Eye remains active through the night and in enclosed daytime darkness, caves, underwater spaces, and other places without usable skylight.
 
@@ -47,8 +47,8 @@ Defeating a creature teaches you how to fight that creature type. Each stack las
 
 | Rank | 1 | 2 | 3 | 4 | 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| INT required | 35 | 38 | 41 | 45 | 50 |
-| Player Level | 30 | 35 | 40 | 45 | 50 |
+| INT required | 24 | 29 | 34 | 39 | 44 |
+| Player Level | 18 | 24 | 30 | 36 | 42 |
 | Damage per stack | +0.4% | +0.8% | +1.2% | +1.6% | +2% |
 | At five stacks | +2% | +4% | +6% | +8% | +10% |
 
@@ -60,9 +60,9 @@ On death, preserves a percentage of the vanilla XP that would otherwise be delet
 
 | Rank | 1 | 2 | 3 | 4 | 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| INT required | 40 | 42 | 44 | 47 | 50 |
-| Player Level | 35 | 39 | 43 | 47 | 50 |
+| INT required | 28 | 32 | 36 | 40 | 45 |
+| Player Level | 22 | 28 | 34 | 39 | 44 |
 | XP retained | 5% | 10% | 20% | 30% | 50% |
 
 !!! tip "Build note"
-    INT 40 is a strong general-purpose scholar breakpoint. Rank 50 is for players who want the complete cave-exploration and long-term progression package rather than direct combat power.
+    INT 40 completes Night Eye and reaches Memory IV under the balanced defaults. INT 45 and Player Level 44 complete every Intellect passive; rank 50 remains the maximum XP-orb bonus. Long Progression Mode restores the original higher gates.

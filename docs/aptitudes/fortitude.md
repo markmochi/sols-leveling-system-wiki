@@ -11,11 +11,13 @@ description: Exact Fortitude passive gates and mechanics for Steadfast, Tempered
 
 | Passive | Gates by passive level (`DEF / Player`) | Effect range |
 |---|---|---|
-| Steadfast | `5/2 · 12/7 · 20/14 · 30/24 · 40/36` | +5% → +25% Knockback Resistance |
-| Tempered Armor | `10/5 · 18/11 · 26/19 · 35/30 · 44/42` | 8% → 40% less armor durability loss |
-| Guarded | `20/10 · 27/17 · 34/25 · 42/35 · 50/45` | 10% → 28% next-hit reduction; 12s → 8s recharge |
-| Last Bastion | `30/20 · 35/27 · 40/35 · 46/43 · 50/50` | 2% → 15% direct-hit reduction below 30% HP |
-| Adaptation | `40/40 · 41/41 · 42/42 · 43/43 · 44/44 · 45/45 · 46/46 · 47/47 · 48/48 · 50/50` | 3% → 13.33% per matching stack; up to 40% |
+| Steadfast | `4/2 · 10/6 · 18/11 · 26/18 · 34/27` | +5% → +25% Knockback Resistance |
+| Tempered Armor | `8/4 · 14/8 · 22/14 · 30/21 · 38/30` | 8% → 40% less armor durability loss |
+| Guarded | `14/7 · 20/12 · 27/18 · 34/26 · 42/35` | 10% → 28% next-hit reduction; 12s → 8s recharge |
+| Last Bastion | `22/14 · 28/20 · 34/27 · 40/35 · 45/42` | 2% → 15% direct-hit reduction below 30% HP |
+| Adaptation | `32/28 · 34/30 · 36/32 · 38/34 · 40/36 · 42/38 · 44/40 · 45/42 · 46/44 · 48/46` | 3% → 13.33% per matching stack; up to 40% |
+
+These are the v1.0.3 balanced defaults. Long Progression Mode restores the original, higher gate pairs.
 
 ## Steadfast
 
@@ -81,4 +83,3 @@ Guarded, Last Bastion, and Adaptation do **not** multiply. When several can affe
 - Guarded favors spaced heavy hits; rapid attacks repeatedly restart its recharge.
 - Last Bastion covers pressure at low HP but does not replace Vitality's lethal protection.
 - Adaptation is the deep specialist reward for repeated, readable damage types.
-

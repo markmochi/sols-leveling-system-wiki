@@ -9,7 +9,7 @@ hide:
   <div>
     <div class="codex-hero__eyebrow">The adventurer's progression codex</div>
     <h1>Every battle<br>shapes your path.</h1>
-    <p class="codex-hero__lead">Earn Player EXP, forge a build through five Aptitudes, and master the combat styles you actually use. This guide turns a deep RPG system into clear decisions, one milestone at a time.</p>
+    <p class="codex-hero__lead">Earn Player EXP on the balanced v1.0.3 journey, forge a build through five Aptitudes, and master the combat styles you actually use. This guide turns a deep RPG system into clear decisions, one milestone at a time.</p>
     <div class="codex-actions">
       <a class="codex-button" href="getting-started/quick-start/">Begin your journey →</a>
       <a class="codex-button codex-button--ghost" href="aptitudes/">Choose an Aptitude</a>
@@ -63,4 +63,4 @@ hide:
 - Server configuration, commands, reconciliation, troubleshooting, and safe testing
 
 !!! info "Default rules"
-    Numbers in this Codex use the public default rules. Servers can change caps, progression resources, passive Player-Level gates, anti-farm rules, and classifications.
+    Numbers in this Codex use the v1.0.3 balanced defaults. Servers can enable Long Progression Mode or change caps, progression resources, passive gates, anti-farm rules, and classifications.

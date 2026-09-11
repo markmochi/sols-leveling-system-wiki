@@ -6,20 +6,20 @@ Limit Breaker is Fortune's capstone: when a worthy enemy pushes you near defeat,
 
 ## Unlocking the ten ranks
 
-Every rank requires **50 LUCK**.
+The v1.0.3 balanced profile spreads the ten ranks across **36–50 LUCK** and Player Levels **32–46**. Long Progression Mode restores the original requirement of 50 LUCK for every rank and Player Levels 45–50.
 
-| Rank | Player Level | Duration | Damage vs target | Move speed | Final damage reduction | Ailment reduction | Shield | Crash | Cooldown |
+| Rank | LUCK / Player | Duration | Damage vs target | Move speed | Final damage reduction | Ailment reduction | Shield | Crash | Cooldown |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1 | 45 | 10s | +40% | +8% | 10% | 15% | 5% HP | 120s | 30m |
-| 2 | 46 | 15s | +48% | +9% | 11% | 18% | 6% HP | 110s | 28m |
-| 3 | 46 | 18s | +52% | +10% | 12% | 21% | 7% HP | 100s | 26m |
-| 4 | 47 | 21s | +60% | +11% | 13% | 24% | 8% HP | 95s | 24m |
-| 5 | 47 | 26s | +68% | +12% | 14% | 27% | 9% HP | 90s | 22m |
-| 6 | 48 | 32s | +72% | +13% | 16% | 30% | 10% HP | 88s | 20m |
-| 7 | 48 | 35s | +76% | +14% | 18% | 33% | 11% HP | 85s | 19m |
-| 8 | 49 | 38s | +78% | +15% | 19% | 36% | 12% HP | 82s | 18m |
-| 9 | 49 | 40s | +80% | +16.5% | 21% | 38% | 13.5% HP | 80s | 16m |
-| 10 | 50 | 60s | +100% | +18% | 22% | 40% | 15% HP | 60s | 15m |
+| 1 | 36 / 32 | 10s | +40% | +8% | 10% | 15% | 5% HP | 120s | 30m |
+| 2 | 38 / 34 | 15s | +48% | +9% | 11% | 18% | 6% HP | 110s | 28m |
+| 3 | 40 / 36 | 18s | +52% | +10% | 12% | 21% | 7% HP | 100s | 26m |
+| 4 | 42 / 38 | 21s | +60% | +11% | 13% | 24% | 8% HP | 95s | 24m |
+| 5 | 44 / 40 | 26s | +68% | +12% | 14% | 27% | 9% HP | 90s | 22m |
+| 6 | 45 / 42 | 32s | +72% | +13% | 16% | 30% | 10% HP | 88s | 20m |
+| 7 | 46 / 43 | 35s | +76% | +14% | 18% | 33% | 11% HP | 85s | 19m |
+| 8 | 47 / 44 | 38s | +78% | +15% | 19% | 36% | 12% HP | 82s | 18m |
+| 9 | 48 / 45 | 40s | +80% | +16.5% | 21% | 38% | 13.5% HP | 80s | 16m |
+| 10 | 50 / 46 | 60s | +100% | +18% | 22% | 40% | 15% HP | 60s | 15m |
 
 Bosses add 15 seconds to the challenge timer; elites add 5 seconds.
 
@@ -66,4 +66,3 @@ Crash applies for the duration listed in the table:
 
 !!! tip "Practical advice"
     Accept only when the target is reachable and the arena is stable. A long cooldown begins whether the wager ends in glory or disaster; an escape route based on teleporting will count against you.
-

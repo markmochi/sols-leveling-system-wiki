@@ -7,13 +7,13 @@ Mastery passives unlock automatically at levels **5, 10, 15, 20, 25, and 30**. T
 | Level | Passive | Effect |
 | ---: | --- | --- |
 | 5 | Iron Fists I | +1.5 flat unarmed damage and +0.2 knockback. |
-| 10 | Ore Breaker I | Mine common natural ores by hand. |
+| 10 | Ore Breaker I | Mine common stone-family blocks and common natural ores by hand. |
 | 15 | Ore Breaker II | Adds diamond and emerald ore. |
 | 20 | Ancient Breaker | Adds ancient debris. |
 | 25 | Iron Fists II | Replaces rank I with +3 flat damage and +0.35 knockback. |
 | 30 | Titan Hands | +5 flat unarmed damage and faster ore breaking. |
 
-Hand mining awards 0.1 STR Mastery EXP per eligible natural ore, up to ten mastery points per rolling hour. Player-placed ore grants neither progression nor an exploit path.
+Hand mining awards 0.1 STR Mastery EXP per eligible natural ore, up to ten mastery points per rolling hour. Common stone-family blocks are harvestable with Ore Breaker I but do not award that ore progression. Player-placed ore grants neither progression nor an exploit path.
 
 Approximate default break times:
 
@@ -50,4 +50,3 @@ Approximate default break times:
 STR Mastery reaches up to +30% unarmed scaling, plus unlocked fist passives, with the added STR contribution capped at +10 damage. Weapon and Range Mastery each reach +15% base scaling.
 
 The combined Sol's Leveling damage bucket for Weapon and Range is capped by the smallest of the calculated bonus, 30% of the original hit, or 30 absolute damage. These limits preserve build identity without allowing compatibility stacks to grow without bound.
-

@@ -1,26 +1,29 @@
 # EXP tables
 
-These values use the public formulas and round each next-level requirement to the nearest ten.
+These values use the v1.0.3 balanced defaults. Mastery requirements continue to round to the nearest ten.
 
 ## Player Level
 
-Requirement for the next level: `70 × level^1.08`  
-Total EXP to reach level 50: **112,670**
+Requirement for the next level: `60 × level`
+
+Total EXP to reach level 50: **73,500**
 
 | Reach level | Total Player EXP | Aptitude points earned |
 | ---: | ---: | ---: |
 | 1 | 0 | 0 |
-| 2 | 70 | 3 |
-| 5 | 760 | 12 |
-| 10 | 3,620 | 27 |
-| 15 | 8,740 | 42 |
-| 20 | 16,200 | 58 |
-| 25 | 26,070 | 73 |
-| 30 | 38,370 | 88 |
-| 35 | 53,170 | 104 |
-| 40 | 70,470 | 119 |
-| 45 | 90,290 | 134 |
-| 50 | 112,670 | 150 |
+| 2 | 60 | 3 |
+| 5 | 600 | 12 |
+| 10 | 2,700 | 27 |
+| 15 | 6,300 | 42 |
+| 20 | 11,400 | 58 |
+| 25 | 18,000 | 73 |
+| 30 | 26,100 | 88 |
+| 35 | 35,700 | 104 |
+| 40 | 46,800 | 119 |
+| 45 | 59,400 | 134 |
+| 50 | 73,500 | 150 |
+
+With `longProgressionMode = true`, Player Levels use the original `70 × level^1.08` curve and require **112,670 total EXP** to reach level 50. The Guild Ledger can calculate either profile.
 
 ## Combat Masteries
 
@@ -41,4 +44,4 @@ Total EXP to reach mastery level 30: **156,640 per mastery**
 [Calculate any level range in the Guild Ledger →](../builds/planner.md){ .codex-button }
 
 !!! note "Server configuration"
-    Server owners can change level caps and other progression settings. The in-game interface is authoritative for a customized server.
+    Server owners can select Long Progression Mode and change caps or other progression settings. The in-game interface is authoritative for a customized server.

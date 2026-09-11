@@ -1,12 +1,13 @@
 # Guild Ledger
 
-Draft a build before spending vanilla XP on a respec. The ledger uses the public level curve, 150-point budget, aptitude caps, base bonuses, and passive gates.
+Draft a build before spending vanilla XP on a respec. The ledger uses the public v1.0.3 curves, 150-point budget, aptitude caps, base bonuses, and passive gates.
 
 ## Build ledger
 
 <form class="guild-ledger" data-build-ledger>
   <div class="guild-ledger__heading"><strong>Aptitude Draft</strong><span>Whole ranks · default caps</span></div>
   <div class="ledger-grid">
+    <label>Progression mode<select name="mode"><option value="balanced">Balanced (default)</option><option value="long">Long progression</option></select></label>
     <label>Player Level<input name="level" type="number" min="1" max="50" value="50" required></label>
     <label>HP<input name="hp" type="number" min="0" max="50" value="30" required></label>
     <label>DEF<input name="def" type="number" min="0" max="50" value="30" required></label>
@@ -25,7 +26,7 @@ The passive count reports ranks whose two gates are met. You still claim and tog
 <form class="guild-ledger" data-xp-ledger>
   <div class="guild-ledger__heading"><strong>Journey Estimate</strong><span>Start of level → start of level</span></div>
   <div class="ledger-grid">
-    <label>Progression<select name="kind"><option value="player">Player Level</option><option value="mastery">Mastery</option></select></label>
+    <label>Progression<select name="kind"><option value="player">Player Level — balanced</option><option value="player_long">Player Level — long</option><option value="mastery">Mastery</option></select></label>
     <label>Current level<input name="from" type="number" min="1" max="50" value="1" required></label>
     <label>Target level<input name="to" type="number" min="2" max="50" value="50" required></label>
   </div>
@@ -34,4 +35,4 @@ The passive count reports ranks whose two gates are met. You still claim and tog
 </form>
 
 !!! note
-    Servers may change caps, curves, and progression settings. Treat this ledger as the public default, then check the server's configuration if the numbers differ in game.
+    Balanced is the v1.0.3 default. Long progression restores the original Player EXP curve and all original Aptitude passive gates. Server owners can also change caps and requirement lists, so the in-game screen remains authoritative for a customized server.

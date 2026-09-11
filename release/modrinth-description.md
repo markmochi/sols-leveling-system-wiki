@@ -8,13 +8,13 @@ Fight dangerous creatures, survive hostile territory, specialize your character,
 
 Press **Y** while playing to open the Leveling Screen. This is the default keybind on every supported edition.
 
-You can also open your inventory and click the **Open Leveling** crest beside it. If another mod already uses Y, change **Open Leveling Screen** in Minecraft's Controls menu under **Sol's Leveling System**.
+You can also open your inventory and use the native **Leveling** tab. Press the configured key again to close the screen; the toggle continues to work after rebinding it in Minecraft's Controls menu.
 
 The Leveling Screen contains your Player Level and EXP progress, available Aptitude Points, stat previews, Aptitude allocation, ranked Passives, Combat Masteries, recent EXP sources, and confirmation prompts.
 
 ## Main features
 
-- Player Levels 1–50 and a 150-point Aptitude budget.
+- Player Levels 1–50, a 150-point Aptitude budget, a balanced 73,500-EXP default curve, and optional Long Progression Mode for the original journey and passive gates.
 - Five Aptitudes: HP – Vitality, DEF – Fortitude, DEX – Dexterity, INT – Intellect, and LUCK – Fortune.
 - 25 ranked, individually toggleable Aptitude Passives.
 - STR, WEAPON, and RANGE Masteries from level 1–30.
@@ -27,9 +27,9 @@ The Leveling Screen contains your Player Level and EXP progress, available Aptit
 
 - **HP – Vitality:** Max HP, improved healing, overheal barriers, underwater endurance, persistent-hazard resistance, and Last Resort.
 - **DEF – Fortitude:** Armor, Toughness, knockback resistance, lower armor wear, Guarded, Last Bastion, and damage-type Adaptation.
-- **DEX – Dexterity:** Movement Speed, efficient sprinting, climbing, mobile item use, Ender Pearl Return Marks, and Flow State.
+- **DEX – Dexterity:** Movement Speed and Attack Speed, efficient sprinting, climbing, mobile item use, Ender Pearl Return Marks, and Flow State.
 - **INT – Intellect:** increased experience-orb gain, longer beneficial effects, merchant discounts, Night Eye, Field Study, and retained lost XP.
-- **LUCK – Fortune:** Loot Luck, compatible status-roll improvement, Lucky Recovery, Lucky Drop, Fateful Strike, Overconfidence, and Limit Breaker.
+- **LUCK – Fortune:** a chance for an additional full chest, fishing, or mob loot-table roll; compatible state-roll improvement; Lucky Recovery; Lucky Drop; Fateful Strike; Overconfidence; and Limit Breaker.
 
 By the default level cap, you can fully master three Aptitudes or divide points across a hybrid build. Spending unused points is free. Removing confirmed ranks costs raw Minecraft Experience points and is briefly combat-locked. Aptitude passive ranks do not consume points; claim them when both their Player Level and Aptitude requirements are met.
 
@@ -43,7 +43,7 @@ Mastery EXP uses final effective hostile health removed. Overkill is ignored, he
 
 ## Fair Player EXP
 
-Mob EXP is based on a spawn-time snapshot of health, defense, threat, encounter difficulty, boss status, spawn origin, and repetition. Recent damage contributors share the final reward, and nearby active party members can share it through the optional Sol's Party System integration.
+Mob EXP is based on a spawn-time snapshot of health, defense, threat, encounter difficulty, boss status, spawn origin, and repetition. Direct kill contributors are always included in the distribution, and nearby active party members can share it through the optional Sol's Party System integration.
 
 Active Survival also grants a small Player EXP reward every five eligible minutes when you remain active and have recently faced hostile danger. AFK time does not count.
 
@@ -69,7 +69,7 @@ There are no required content-mod dependencies. Do not mix Forge and NeoForge fi
 
 - Sol's Party System for conserved nearby Player EXP sharing.
 - Sol's Title System for compatible nameplate composition.
-- Sol's Relic System for compatible Fortunate Critical behavior.
+- Sol's Relic System for compatible Fortunate Critical behavior and one shared Loot Luck bonus roll when expanded Luck support is available.
 - Built-in modded weapon and encounter classifications, with datapack tags and JSON overrides for pack authors.
 
 Read the complete **[Adventurer's Codex](https://markmochi.github.io/sols-leveling-system-wiki/)** for every passive, exact EXP tables, build planning, controls, commands, configuration, compatibility, and troubleshooting.

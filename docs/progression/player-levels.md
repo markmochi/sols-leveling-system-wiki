@@ -12,13 +12,19 @@ Player Level is the backbone of your character build. Players begin at level 1, 
 The EXP needed to advance from level `L` is:
 
 ```text
-nearest 10 of 70 × L^1.08
+60 × L
 ```
 
-- Level 1 → 2 costs **70 Player EXP**.
-- Level 1 → 50 costs **112,670 Player EXP** in total.
-- The opening is paced so one unusually enhanced early mob should not skip the early game.
-- The low exponent keeps later levels growing without turning the cap into an extreme grind.
+- Level 1 → 2 costs **60 Player EXP**.
+- Level 1 → 50 costs **73,500 Player EXP** in total.
+- This balanced curve is the v1.0.3 default and reduces the complete level-50 journey by about 35% compared with the original curve.
+- Player-Level and Aptitude-rank gates across all 25 Aptitude passives were lowered to match the faster journey.
+
+## Long Progression Mode
+
+Server owners who prefer the original campaign length can enable `longProgressionMode` in `solslevelingsystem-common.toml`. It restores the original `70 × L^1.08` Player EXP curve—**112,670 total EXP** to level 50—and the original Player-Level and Aptitude-rank requirements for every Aptitude passive.
+
+Changing modes does not erase Player EXP, Aptitude allocations, Masteries, or customized passive requirement lists. Existing earned Player EXP is re-read against the active curve. If the longer rules make a purchased passive temporarily ineligible, the normal rules check removes it; the passive can be claimed again for free after both legacy gates are met.
 
 See [EXP tables](../reference/xp-tables.md) for milestones and the interactive calculator.
 
@@ -48,15 +54,15 @@ Explicit boss tags add the configured boss multiplier. The default final death p
 
 The server tracks final effective damage during the last 30 seconds by default.
 
-- A contributor normally needs at least 5% of recent eligible damage.
-- The final hitter remains eligible even with a smaller share.
+- A recent damage contributor normally needs at least 5% of recent eligible damage; the final hitter remains eligible even with a smaller share.
+- Players who directly contribute to a kill are always included in its EXP distribution; party-recipient distance and activity checks cannot remove them after they qualify as contributors.
 - The creature's reward is divided proportionally; it is not copied for every attacker.
 - Overkill is capped to the health remaining before the hit.
 - Healing cannot enlarge the creature's original health budget.
 - One life can pay only once.
 - Offline contributors receive nothing from the final distribution.
 
-When Sol's Party System sharing is enabled, each party's combined earned share is conserved and divided among eligible nearby members. Recipients must be alive, active, non-spectating, in the same dimension, and within the effective share radius (64 blocks by default).
+When Sol's Party System sharing is enabled, each party's combined earned share is conserved and divided among the contributing player plus eligible nearby party members. Non-contributing recipients must be alive, active, non-spectating, in the same dimension, and within the effective share radius (64 blocks by default).
 
 ## Anti-farm behavior
 
@@ -94,4 +100,4 @@ Player EXP belongs only to Sol's Leveling System. It is not the green vanilla ba
 
 ## Safe persistence
 
-Player EXP persists through normal death, logout, and dimension changes. The server owns all mutations and clamps progress at the active cap. Save migrations preserve prior levels and proportional progress when the built-in curve schema changes.
+Player EXP persists through normal death, logout, and dimension changes. v1.0.3 also preserves Aptitude allocations, purchased passives, Masteries, and persistent cooldowns through death and respawn; Forge retains pre-death recovery through a disconnect or server restart before respawn. The server owns all mutations and clamps progress at the active cap.

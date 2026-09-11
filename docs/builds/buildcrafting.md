@@ -7,33 +7,36 @@ There is no single correct build. The useful question is: **what problem should 
 1. **Your budget grows with Player Level.** Level 50 provides 150 total aptitude points.
 2. **Each aptitude caps at 50.** A completed build can maximize three paths, but spreading points may unlock more early passives.
 3. **Passives cost no separate currency.** Meeting both the Player Level and aptitude requirement lets you claim the rank.
-4. **Aptitude bonuses are always useful.** The base HP, armor, speed, orb XP, and Luck bonuses apply even if a passive is toggled off.
+4. **Aptitude bonuses are always useful.** The base HP, armor, movement and attack speed, orb XP, and Luck bonuses apply even if a passive is toggled off.
 5. **Masteries are separate.** STR, Weapon, and Range grow through their own activity and do not consume aptitude points.
 
 ## Breakpoints worth remembering
 
 | Investment | What it opens |
 | --- | --- |
-| 20 HP | Vital Overflow I and early sustain |
-| 30 HP | Enduring Breath I and stronger health scaling |
-| 40 HP | Last Resort begins; strong tank breakpoint |
-| 50 HP | Maximum health scaling and capstone passive ranks |
-| 20 DEF | Guarded I and sturdy general defense |
-| 30 DEF | Last Bastion I |
-| 40 DEF | Adaptation begins |
-| 50 DEF | Complete defensive tree |
-| 20 DEX | Early travel kit and Mobile Handling II |
-| 30 DEX | Turning Point begins |
-| 40 DEX | Flow begins and Efficient Stride V |
-| 50 DEX | Guaranteed Turning Point V and Flow X |
-| 20 INT | early potions, trading, and XP-orb growth |
-| 30 INT | Night Eye begins |
-| 40 INT | Field Study III, Memory I, maximum Potion Proficient |
-| 50 INT | complete scholar toolkit |
-| 25 LUCK | Fateful Strike begins |
-| 32 LUCK | Overconfidence begins |
-| 40 LUCK | strong recovery and base Luck |
-| 50 LUCK | Limit Breaker and all Fortune capstones |
+| 6 HP | Recuperation begins |
+| 12 HP | Vital Overflow begins |
+| 24 HP | Adaptive Physique begins |
+| 30 HP | Last Resort begins |
+| 45 HP | Complete balanced Vitality passive tree |
+| 14 DEF | Guarded begins |
+| 22 DEF | Last Bastion begins |
+| 32 DEF | Adaptation begins |
+| 48 DEF | Complete balanced Fortitude passive tree |
+| 10 DEX | Mobile Handling begins |
+| 22 DEX | Turning Point begins |
+| 28 DEX | Flow begins |
+| 45 DEX | Complete balanced Dexterity passive tree |
+| 16 INT | Night Eye begins |
+| 24 INT | Field Study begins |
+| 28 INT | Memory begins |
+| 45 INT | Complete balanced Intellect passive tree |
+| 18 LUCK | Fateful Strike begins |
+| 24 LUCK | Overconfidence begins |
+| 36 LUCK | Limit Breaker begins |
+| 50 LUCK | Complete balanced Fortune tree and maximum Loot Luck |
+
+These breakpoints use the v1.0.3 balanced profile. Long Progression Mode restores the original higher gates; switch the Guild Ledger to that profile when planning for such a server.
 
 ## Sample level-50 builds
 
@@ -43,7 +46,8 @@ These are **templates**, not prescriptions. Each uses all 150 points.
 
 High health, maximum defensive tools, and enough mobility to control the fight. Pair it with Weapon Mastery for a reliable frontline character.
 
-**Strengths:** stable survival, pursuit, melee uptime.  
+**Strengths:** stable survival, pursuit, attack speed, melee uptime.
+
 **Trade-off:** no scholar economy or Fortune burst.
 
 ### The Wandering Scholar — 40 HP / 20 DEF / 40 DEX / 50 INT

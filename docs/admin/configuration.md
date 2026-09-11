@@ -6,6 +6,7 @@ The common/server configuration is generated as `solslevelingsystem-common.toml`
 
 | Setting | Default | Purpose |
 | --- | ---: | --- |
+| `longProgressionMode` | false | Restores the original Player EXP curve and all original Aptitude-rank and Player-Level passive gates. Reload datapacks or restart after changing it. |
 | `playerLevelCap` | 50 | Maximum Player Level. |
 | `aptitudeCategoryCapV2` | 50 | Maximum ranks in one aptitude. |
 | `totalAptitudeBudgetV2` | 150 | Total points earned by the Player Level cap. |
@@ -16,6 +17,8 @@ The common/server configuration is generated as `solslevelingsystem-common.toml`
 | `passivesEnabled` | true | Global passive switch. |
 
 Changing caps or the total budget can make stored allocations inconsistent with the new rules. Use the [reconciliation workflow](commands.md#safe-reconciliation) after a deliberate rules change.
+
+The balanced v1.0.3 profile is active while `longProgressionMode` is false: Player EXP uses `60 × level` and totals 73,500 at level 50. Setting it to true restores `70 × level^1.08`, 112,670 total EXP, and every original Aptitude passive gate. Switching does not reset earned EXP, allocations, Masteries, or customized requirement lists. A purchased passive that no longer meets the active gates is removed by normal reconciliation and can be claimed again for free when eligible.
 
 ## Anti-exploit defaults
 
@@ -59,4 +62,4 @@ When changing a gate list, keep its entry count aligned with that passive's numb
 
 ## Client options
 
-Players can configure the inventory crest position, high-contrast mode, reduced motion, notification scale/duration/anchor/sound/chat mirror, and particle density/budget. These are presentation preferences; they do not change server-authoritative progression.
+Players can configure the inventory Leveling-tab position, high-contrast mode, reduced motion, notification scale/duration/anchor/sound/chat mirror, and particle density/budget. These are presentation preferences; they do not change server-authoritative progression.

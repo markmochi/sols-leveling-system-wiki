@@ -9,13 +9,15 @@ You only need four ideas to begin: **Player EXP raises Player Level, levels gran
 
 ## 1. Open the Codex screen
 
-Press ++y++ by default, click the crest beside your inventory, or run:
+Press ++y++ by default, use the native Leveling tab in your inventory, or run:
 
 ```text
 /sol leveling open
 ```
 
 The Overview shows your Player Level, current and required EXP, available Aptitude Points, recent EXP sources, derived stats, held-item classification, and all three Masteries.
+
+The configured key is a true toggle: press it again while the Leveling screen is open to close the screen, including after rebinding the control.
 
 ## 2. Earn the two kinds of progression
 
@@ -76,7 +78,7 @@ Hover the item to see its classification. Training targets, owned creatures, ove
 - **Waiting for a passive point:** passives are gate-based, not purchased with a second currency.
 - **Expecting kills alone to train Mastery:** Mastery follows effective damage dealt before the target dies.
 - **Expecting INT to increase Player EXP:** it increases collected Minecraft Experience orbs only.
-- **Assuming LUCK adds flat percentage points:** its compatible status-roll bonus retries a fraction of the remaining failure chance.
+- **Treating both Fortune bonuses as the same roll:** its compatible state retry uses remaining-failure scaling, while its loot-table bonus is a direct chance for one additional full roll.
 - **Testing on the same farm forever:** repetition credit intentionally decays and refills over time.
 - **Respeccing during combat:** allocation changes are blocked for 10 seconds after combat by default.
 

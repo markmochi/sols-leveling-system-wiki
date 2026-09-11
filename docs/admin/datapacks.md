@@ -1,6 +1,15 @@
 # Datapacks & tags
 
-Datapacks let a modpack classify weapons, eligible ores, bosses, elites, training targets, and reward exclusions without modifying the Sol's Leveling System JAR.
+Datapacks let a modpack tune progression and Aptitude effects or classify weapons, eligible hand-mining blocks, bosses, elites, training targets, and reward exclusions without modifying the Sol's Leveling System JAR.
+
+## Progression and Aptitude balance
+
+The shipped defaults live under `data/solslevelingsystem/leveling/`:
+
+- `progression.json` defines the balanced Player curve (`coefficient: 60`, `exponent: 1.0`) and the unchanged Mastery curve.
+- `aptitudes.json` schema 3 defines the five direct Aptitude effects. `dex_attack_speed_per_rank` defaults to `0.002`, or +0.2% Attack Speed per Dexterity rank.
+
+The server validates these files transactionally. Older schema-2 Aptitude data is migrated by supplying the new Dexterity Attack Speed default; schema 1 remains supported. `longProgressionMode` intentionally overrides the Player curve and complete passive-gate profile with the built-in legacy values.
 
 ## Weapon classification overrides
 
@@ -37,9 +46,10 @@ All are under `solslevelingsystem`:
 - `str_ore_breaker_i`
 - `str_ore_breaker_ii`
 - `str_ancient_breaker`
+- `str_stone_breaker`
 - `agile_climber_compatible`
 
-Add modded natural ores to the appropriate STR tier. Placed-block tracking still prevents them from becoming a hand-mining Mastery farm.
+Ore Breaker I unlocks both its common-ore tier and `str_stone_breaker`, which includes ordinary overworld/nether base stone, cobblestone families, sandstone, and End Stone appropriate to the Minecraft edition. Add modded ores or stone-family blocks to the matching tag. Placed-block tracking still prevents ore from becoming a hand-mining Mastery farm.
 
 ## Important entity tags
 

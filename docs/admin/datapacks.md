@@ -1,15 +1,16 @@
 # Datapacks & tags
 
-Datapacks let a modpack tune progression and Aptitude effects or classify weapons, eligible hand-mining blocks, bosses, elites, training targets, and reward exclusions without modifying the Sol's Leveling System JAR.
+Datapacks let a modpack tune progression, Aptitude effects, and Mastery passive values, or classify weapons, eligible hand-mining blocks, bosses, elites, training targets, and reward exclusions without modifying the Sol's Leveling System JAR.
 
-## Progression and Aptitude balance
+## Progression, Aptitude & Mastery balance
 
 The shipped defaults live under `data/solslevelingsystem/leveling/`:
 
-- `progression.json` defines the balanced Player curve (`coefficient: 60`, `exponent: 1.0`) and the unchanged Mastery curve.
-- `aptitudes.json` schema 3 defines the five direct Aptitude effects. `dex_attack_speed_per_rank` defaults to `0.002`, or +0.2% Attack Speed per Dexterity rank.
+- `progression.json` defines the balanced Player curve (`coefficient: 60`, `exponent: 1.0`) and the Mastery curve (`coefficient: 150`, `exponent: 1.3`).
+- `aptitudes.json` (schema 3) defines the five direct Aptitude effects. `dex_attack_speed_per_rank` defaults to `0.002`, or +0.2% Attack Speed per Dexterity rank.
+- `passives.json` (schema 2) defines base Mastery caps (`str_base_max: 0.30`, `weap_base_max: 0.20`, `range_base_max: 0.20`), damage caps (`str_damage_cap: 14.0`, `classified_damage_cap_fraction: 0.45`, `signature_damage_cap_fraction: 0.70`, `classified_damage_cap_absolute: 40.0`), hand-mining speeds, and individual Mastery node and Awakening signature values across STR, WEAPON, and RANGE.
 
-The server validates these files transactionally. Older schema-2 Aptitude data is migrated by supplying the new Dexterity Attack Speed default; schema 1 remains supported. `longProgressionMode` intentionally overrides the Player curve and complete passive-gate profile with the built-in legacy values.
+The server validates these files transactionally—malformed values or inverted tier progressions are rejected cleanly without breaking the active rules snapshot. Older schema files migrate automatically by supplying the new defaults where omitted. `longProgressionMode` intentionally overrides the Player curve and complete Aptitude passive-gate profile with the built-in legacy values.
 
 ## Weapon classification overrides
 
@@ -62,4 +63,4 @@ Use standard Minecraft tag JSON with `"replace": false` unless the pack delibera
 
 ## Reload and verify
 
-Run `/sol leveling admin reload`, then use `/sol leveling admin debugmob <entity>` for entity rules. Test a weapon against a controlled target and confirm which Mastery gains EXP. Invalid classification reloads are logged and do not replace the last known-good classification map.
+Run `/sol leveling admin reload`, then use `/sol leveling admin debugmob <entity>` for entity rules. Test a weapon against a controlled target and confirm which Mastery gains EXP. Invalid reloads are logged and do not replace the last known-good snapshot.

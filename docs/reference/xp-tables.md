@@ -1,6 +1,6 @@
 # EXP tables
 
-These values use the v1.0.3 balanced defaults. Mastery requirements continue to round to the nearest ten.
+These values use the v1.1.0 defaults. Mastery requirements round to the nearest ten.
 
 ## Player Level
 
@@ -23,23 +23,23 @@ Total EXP to reach level 50: **73,500**
 | 45 | 59,400 | 134 |
 | 50 | 73,500 | 150 |
 
-With `longProgressionMode = true`, Player Levels use the original `70 × level^1.08` curve and require **112,670 total EXP** to reach level 50. The Guild Ledger can calculate either profile.
+With `longProgressionMode = true`, Player Levels use the legacy `70 × level^1.08` curve and require **112,670 total EXP** to reach level 50. The Guild Ledger can calculate either profile.
 
 ## Combat Masteries
 
 Requirement for the next level: `150 × level^1.3`  
-Total EXP to reach mastery level 30: **156,640 per mastery**
+Total EXP to reach mastery level 30: **156,640 per mastery** *(INT's **Eidetic Memory** grants +2%–15% bonus Mastery EXP)*
 
-| Reach mastery level | Total Mastery EXP |
-| ---: | ---: |
-| 1 | 0 |
-| 2 | 150 |
-| 5 | 2,060 |
-| 10 | 11,550 |
-| 15 | 30,570 |
-| 20 | 60,440 |
-| 25 | 102,180 |
-| 30 | 156,640 |
+| Reach mastery level | Total Mastery EXP | Unlocks |
+| ---: | ---: | --- |
+| 1 | 0 | Starting level |
+| 2 | 150 | Base Mastery scaling grows |
+| 5 | 2,060 | **Tier 1 Skill Tree choice** *(STR / WEAPON / RANGE)* |
+| 10 | 11,550 | **Tier 2 Skill Tree choice** *(+ Ore Breaker I on STR)* |
+| 15 | 30,570 | **Tier 3 Skill Tree choice** *(+ Ore Breaker II on STR)* |
+| 20 | 60,440 | **Tier 4 Skill Tree choice** *(+ Ancient Breaker on STR)* |
+| 25 | 102,180 | **Tier 5 Skill Tree choice** |
+| 30 | 156,640 | **Awakening capstone** *(Titan Hands / Weapon Master / Marksman)* |
 
 [Calculate any level range in the Guild Ledger →](../builds/planner.md){ .codex-button }
 

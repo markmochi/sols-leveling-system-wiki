@@ -1,11 +1,11 @@
 ---
 title: Combat Masteries
-description: STR, WEAPON, and RANGE Mastery progression, classification, effective damage, and anti-training rules.
+description: STR, WEAPON, and RANGE Mastery progression, ascending skill trees, Awakenings, classification, effective damage, and reset rules.
 ---
 
 # Combat Masteries
 
-Masteries reward how you fight, not where you spend Aptitude Points. STR, WEAPON, and RANGE each begin at level 1 and reach a default cap of 30.
+Masteries reward how you fight rather than where you spend Aptitude Points. **STR**, **WEAPON**, and **RANGE** each begin at level 1 and reach a default cap of 30, unlocking a branching **Skill Tree** from **Lv. 5** up to a **Lv. 30 Awakening**.
 
 ## Default curve
 
@@ -18,17 +18,29 @@ nearest 10 of 150 × L^1.3
 - Mastery 1 → 2 costs **150 effective damage**.
 - Mastery 1 → 30 costs **156,640 Mastery EXP**.
 - Progress is tracked in tenths so fractional final damage is not lost.
-- Each Mastery has its own independent EXP total and level.
+- Each Mastery has its own independent EXP total, level, and chosen skill tree path.
+- INT's **Eidetic Memory** Awakening can grant **+2% to +15% bonus Mastery EXP**.
 
 ## The three paths
 
-| Mastery | Earned by | Base bonus at level 30 | Milestone identity |
+| Mastery | Earned by | Base bonus at level 30 | Skill tree identity |
 |---|---|---:|---|
-| STR | Direct hostile damage while the main hand is empty | +30% unarmed damage | empowered fists and bare-hand ore breaking |
-| WEAPON | Direct hostile damage with a recognized melee weapon | +15% matching damage | attack speed, stability, openers, finishers |
-| RANGE | Direct hostile damage through a recognized ranged path | +15% matching damage | steady aim, range bands, finishers, marksmanship |
+| **STR** *(Brawler)* | Direct hostile damage while the main hand is empty | +30% unarmed damage | Unarmed combo brawling, parries, lifesteal, **Titan Hands / Earthshaker** Awakening, plus bare-hand ore breaking |
+| **WEAPON** *(Warrior)* | Direct hostile damage with a recognized melee weapon | +20% matching damage | Grip tempo vs. heavy cleaves, openers/finishers, sustain, armor shred, 1v1 dueling, **Weapon Master / Masterstroke** Awakening |
+| **RANGE** *(Ranger)* | Direct hostile damage through a recognized ranged path | +20% matching damage | Draw speed vs. steady aim, range control, piercing/marks, multi-arrow volleys, kiting, **Marksman / Deadeye** Awakening |
 
-Milestone passives unlock automatically at levels 5, 10, 15, 20, 25, and 30. Every unlocked Mastery passive can be toggled separately.
+## Ascending Skill Trees & Awakenings
+
+Each Mastery opens an ascending bottom-to-top **Skill Tree**:
+
+1. **Sequential Tier Choices (Lv. 5, 10, 15, 20, and 25):** Each tier offers **2 competing styles**. You must pick **1 node per tier** starting from **Lv. 5 upward**—higher tiers cannot be chosen until the previous tier has been locked in.
+2. **Confirmation & Sealed Branches:** Clicking a candidate node opens a confirmation prompt showing its effect and which rival node it seals for that tier. Chosen nodes can still be toggled ON or OFF individually without losing your selection.
+3. **Lv. 30 Awakening:** Reaching Mastery **Lv. 30** and completing **all 5 tier choices** awakens the capstone at the top of the tree (**Titan Hands**, **Weapon Master**, or **Marksman**), granting both permanent bonuses and a signature combat mechanic.
+4. **Resetting a Mastery Tree:** Out of combat (10-second combat lock), you can reset all chosen tiers in a Mastery tree to reselect your path from Lv. 5 upward. Resetting costs **Vanilla XP Levels** based on how many tiers are currently locked in:
+
+```text
+2 + (2 × chosen tiers) Vanilla XP Levels   →   4 to 12 XP Levels
+```
 
 ## Effective-damage accounting
 
@@ -61,24 +73,24 @@ Possible results are `MELEE`, `RANGED`, `HYBRID`, `UNARMED`, or `EXCLUDED`.
 
 ## Damage bonus caps
 
-STR's base percentage and fist flat damage together can add no more than **10 damage** to one hit.
+STR's base percentage, conditional bonuses, and flat fist damage together can add no more than **+14 damage** to one hit.
 
 WEAPON and RANGE use one shared Leveling bonus bucket per hit. The total added damage is capped to the smallest of:
 
 - the calculated base and conditional Mastery bonus;
-- 30% of the original hit; or
-- 30 absolute damage.
+- **45%** of the original hit (**70%** on **Masterstroke** and **Deadeye** signature hits); or
+- **40** absolute damage.
 
-This allows milestone combinations to matter without letting several conditional nodes create runaway scaling on very large modded attacks.
+This allows skill-tree synergies and Awakening signatures to hit decisively without letting modded multi-hundred-damage weapons scale out of control.
 
-## STR hand-mining training
+## STR hand-mining track
 
-Unlocked Ore Breaker nodes let empty hands harvest supported blocks through normal loot tables. Ore Breaker I includes common stone-family blocks as well as common ores. Only successfully broken, naturally generated tracked ore can grant STR Mastery EXP; ordinary stone can be harvested but does not become a Mastery farm.
+Alongside the Brawler choice tree, STR Mastery automatically unlocks three hand-mining passives beneath the tree (**Ore Breaker I** at Lv. 10, **Ore Breaker II** at Lv. 15, and **Ancient Breaker** at Lv. 20). Unlocked nodes let empty hands harvest supported blocks through normal loot tables, and **Titan Hands** accelerates hand-mining speed by **40%**.
 
-- Each eligible block grants 0.1 STR Mastery EXP.
-- Player-placed ore grants none.
-- The default hourly cap is 10 STR Mastery EXP from hand mining.
-- Haste, Mining Fatigue, water, and airborne penalties remain relevant.
-- Disabling a required passive immediately removes that ore tier.
+- **Ore Breaker I** includes common stone-family blocks as well as common natural ores.
+- Only successfully broken, naturally generated tracked ore grants **0.1 STR Mastery EXP** (ordinary stone can be harvested cleanly without becoming a Mastery farm).
+- Player-placed ore grants no Mastery EXP.
+- The default hourly cap is **10 STR Mastery EXP** from hand mining.
+- Disabling a hand-mining node immediately disables harvesting for that tier.
 
-See [Mastery passive trees](../reference/mastery-passives.md) for every milestone and exact condition.
+See [Mastery passive trees](../reference/mastery-passives.md) for every tier choice, Awakening, cooldown, and exact value.

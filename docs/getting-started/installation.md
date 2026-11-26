@@ -30,17 +30,16 @@ There are **no required content-mod dependencies**. Optional companion integrati
 
 ## Updating an existing world
 
-Player progression is versioned and migrated by the server. Player Level, Aptitude allocation, passive levels and toggles, Masteries, cooldowns, and other persistent progression are stored with the player.
+Player progression is versioned and migrated automatically by the server. Player Level, Aptitude allocation, passive levels and toggles, Masteries, chosen Mastery tiers, cooldowns, and other persistent progression are stored with the player.
 
 - Back up the world before any mod update.
-- Replace the old Sol's Leveling System JAR on the server and every client.
-- Do not mix the final public v1.0.3 file with an earlier prerelease JAR that also reported v1.0.3; the synchronized rules payload now uses protocol 21 and requires matching builds on both sides.
-- Do not delete player data or the world config to “refresh” progression.
+- Replace the old Sol's Leveling System JAR on the server and every client with the matching **v1.1.0** build.
+- Do not delete player data or the world config to “refresh” progression—existing worlds migrate cleanly, and players upgrading from earlier versions can open each Mastery tree to pick their unlocked tier nodes right away.
 - Check the latest server log for a clean rules load.
-- If caps or Aptitude rules changed, use the [reconciliation preview](../admin/commands.md#safe-reconciliation) before applying any destructive correction.
+- If caps or Aptitude rules were manually changed in config, use the [reconciliation preview](../admin/commands.md#safe-reconciliation) before applying any destructive correction.
 
 !!! note "Death is not a character reset"
-    Normal death preserves Player EXP, Aptitudes, passive purchases, Masteries, and persistent cooldowns. On Forge, v1.0.3 also keeps a pre-death recovery copy if the player disconnects or the server stops before respawn. Active Survival resets; INT's Memory passive separately controls ordinary Minecraft Experience retention.
+    Normal death preserves Player EXP, Aptitudes, passive purchases, Masteries, chosen Mastery nodes, and persistent cooldowns, including pre-death recovery across disconnects before respawn. Active Survival resets; INT's **Eidetic Memory** passive separately controls ordinary Minecraft Experience retention.
 
 ## Configuration locations
 

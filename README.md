@@ -22,8 +22,8 @@ Remove access tokens, server addresses, player IP addresses, personal paths, and
 ## Inside the Codex
 
 - Player Level, EXP sources, contribution rules, and repeat-farm safeguards
-- All five Aptitudes and all 25 ranked passive paths
-- STR, Weapon, and Range Masteries with every milestone passive
+- All five Aptitudes, all 25 ranked passives, and their 10-rank Awakenings
+- STR, WEAPON, and RANGE branching Mastery Skill Trees, Lv. 30 Awakenings, and XP-level resets
 - Build archetypes and an interactive build/EXP Guild Ledger
 - Limit Breaker, Active Survival, compatibility, commands, and datapacks
 - Server configuration, troubleshooting, and safe progression reconciliation

@@ -1,11 +1,11 @@
 ---
 title: Aptitudes and respecs
-description: Aptitude points, direct stat effects, passive requirements, allocation previews, and respec costs.
+description: Aptitude points, direct stat effects, passive requirements, Awakenings, allocation previews, and respec costs.
 ---
 
 # Aptitudes and respecs
 
-Aptitudes are your chosen character build. They are separate from Combat Masteries: Aptitudes spend a limited point budget, while Masteries grow automatically through combat use.
+Aptitudes are your chosen character build. They are separate from Combat Masteries: Aptitudes spend a limited point budget, while Masteries grow through combat use and unlock their own branching skill trees.
 
 ## Point entitlement
 
@@ -21,7 +21,7 @@ Each Aptitude can reach rank 50. Therefore the default budget supports:
 
 - three complete rank-50 trees;
 - two complete trees plus a 50-point hybrid spread;
-- or a broad distribution that trades capstones for more base-stat variety.
+- or a broad distribution that trades 10-rank Awakening capstones for more base-stat variety.
 
 ## Direct effects
 
@@ -35,16 +35,16 @@ Each Aptitude can reach rank 50. Therefore the default budget supports:
 
 Fortune's state retry is not a flat +20 percentage points. It improves a failed compatible state roll by a fraction of its remaining failure chance. Its separate loot-table bonus is a direct chance for one additional full roll: Fortune supplies up to 20%, while other equipped Loot Luck can raise the shared chance to a 50% cap.
 
-## Passive ranks are gate-based
+## Passive ranks & Awakenings are gate-based
 
-Every Aptitude owns five passives. A passive level requires:
+Every Aptitude owns four 5-rank passives and one 10-rank **Awakening** capstone (**Last Resort**, **Adaptation**, **Flow State**, **Eidetic Memory**, and **Limit Breaker**—150 total passive ranks across all five trees). A passive level requires:
 
 1. the listed Player Level; and
 2. the listed rank in that passive's Aptitude.
 
 Once both gates are met, claiming the passive rank costs **no Aptitude Points and no Minecraft Experience**. Double left-click to level it and double right-click to unlevel it. Toggle the passive when you want its rank preserved but its effect disabled.
 
-The tables in this Codex show the lower v1.0.3 balanced gates. Enabling `longProgressionMode` restores the complete original Player-Level and Aptitude-rank gate profile.
+The tables in this Codex show the balanced defaults. Enabling `longProgressionMode` restores the complete original Player-Level and Aptitude-rank gate profile.
 
 If a respec or cap reduction makes the current passive level illegal, the server removes that passive's complete purchase and toggle state at level 0. Reaching the gates again lets you reclaim it for free.
 
@@ -52,18 +52,21 @@ If a respec or cap reduction makes the current passive level illegal, the server
 
 - Increasing a rank with unspent entitlement is free.
 - Moving only upward across Aptitudes is free as long as the total stays within your entitlement.
-- Any confirmed rank reduction is a paid respec.
+- Any confirmed Aptitude rank reduction is a paid respec.
 - The GUI requests a 15-second, revision-bound price quote before confirmation.
-- Allocation is blocked for 10 seconds after combat by default.
+- Allocation and Mastery resets are blocked for 10 seconds after combat by default.
 - The current source default has **no paid-respec cooldown**; an older config may still contain a legacy saved value, but the setting is retained only for compatibility.
 
-The raw Minecraft Experience cost is:
+The raw Minecraft Experience cost for refunding **Aptitude ranks** is:
 
 ```text
 100 + (25 × refunded ranks) + (5 × Player Level)
 ```
 
-At Player Level 30, refunding 10 ranks costs `100 + 250 + 150 = 500` Minecraft Experience points. This means total XP points, not the number shown as your vanilla experience level.
+At Player Level 30, refunding 10 ranks costs `100 + 250 + 150 = 500` Minecraft Experience points (raw XP points, not vanilla experience levels).
+
+!!! info "Aptitude Respec vs. Mastery Tree Reset"
+    Refunding **Aptitude** points uses raw Minecraft Experience points (`100 + 25 × ranks + 5 × Player Level`), whereas resetting chosen nodes in a **Mastery Skill Tree** uses **4–12 Vanilla XP Levels** (`2 + 2 × chosen tiers`). See [Combat Masteries](masteries.md) for Mastery tree resets.
 
 ## Confirmation and safety
 
@@ -80,6 +83,6 @@ If your state changed while the screen was open, the preview refreshes instead o
 
 ## Optimization rule of thumb
 
-The direct HP curve has deliberate diminishing returns: ranks 1–8 are the most health-efficient, ranks 9–30 remain solid, and ranks 31–50 are primarily about deep Vitality specialization and late passive gates. The other four direct effects are linear, so their main breakpoints are passive requirements.
+The direct HP curve has deliberate diminishing returns: ranks 1–8 are the most health-efficient, ranks 9–30 remain solid, and ranks 31–50 are primarily about deep Vitality specialization and **Last Resort** Awakening milestones. The other four direct effects are linear, so their main breakpoints are passive and Awakening requirements.
 
 Use the [Buildcrafting guide](../builds/buildcrafting.md) and [Guild Ledger](../builds/planner.md) before paying for a large respec.

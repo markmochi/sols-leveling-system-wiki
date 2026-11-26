@@ -1,5 +1,97 @@
 # Release notes
 
+## v1.1.0 — Awakenings & Mastery Skill Trees
+
+Available for **Minecraft 1.16.5 Forge**, **1.20.1 Forge**, and **1.21.1 NeoForge**.
+
+### Aptitude Awakening Overhaul
+
+Every Aptitude's final passive is now a full 10-level **Awakening** with passive cores, signature triggers, and high-level milestones.
+
+`HP — Vitality`
+
+- **Last Resort**
+    - 🆕 **Second Wind:** Passively regenerates **0.2%–1.0% Max HP/s** while below **40% HP** (pauses briefly when hit).
+    - **Undying Surge:** Falling below **10% HP** or taking a lethal hit grants **1s–5s of Undying** (cannot drop below **1 HP**), followed by a **10%–40% Max HP** Absorption shield.
+    - 🆕 **Milestones:** Lv. 5 adds **40% damage reduction** during the surge; Lv. 8–10 add **Rally**, healing back **20%–40%** of damage prevented during Undying (up to **35% Max HP**).
+
+`DEF — Fortitude`
+
+- **Adaptation**
+    - 🆕 **Iron Skin:** Grants permanent **+0.5 to +5.0 Armor Toughness**.
+    - 🔺 Repeated hits build **3 / 4 / 5 stacks** (at Lv. 1 / 5 / 10) for up to **40% resistance** against that damage type.
+    - 🆕 **Milestones:** Lv. 7 tracks **2 damage types** at once; Lv. 10 unlocks **Immunity Surge**, negating the next matching hit within **3s** at 5 stacks (**20s** cooldown per type).
+
+`DEX — Dexterity`
+
+- **Flow State**
+    - 🔺 Expanded to **5 stacks** with faster buildup, granting up to **+15% Movement Speed** and **+10% Attack Speed**.
+    - 🆕 **Milestones:** Lv. 3 cuts sprint exhaustion by **15%** at max stacks; Lv. 5–10 grant **8%–22% Evasion**; Lv. 6 adds air control; Lv. 8 prevents direct hits from stripping stacks; Lv. 10 unlocks **Afterimage** (**+30% speed** for **2s** and **+25% damage** on your next hit after dodging).
+
+`INT — Intellect`
+
+- **Eidetic Memory** *(formerly Memory)*
+    - 🔺 Expanded to **10 levels**, retaining **20%–100%** of lost Vanilla XP on death and granting **+2%–15% bonus Mastery EXP**.
+    - 🆕 **Weakness Revealed:** Landing **5 / 4 / 3 consecutive hits** (Lv. 1 / 5 / 10) **Exposes** the enemy for **5s–8s**, making them take **+8%–20% more damage** from all players (**20s** cooldown per target). Defeating an Exposed mob at Lv. 7+ maxes out **Field Study** for that mob type.
+
+`LUCK — Fortune`
+
+- **Limit Breaker**
+    - 🆕 **Fortune Favors the Bold:** Passively boosts the trigger chances of **Lucky Recovery**, **Lucky Drop**, and **Overconfidence** by **+5%–20%**.
+    - 🔺 **All In** offer threshold raised from 30% to **40% HP**.
+    - 🔺 Sneak hold to accept shortened from 1.25s to **0.5s**.
+    - 🔺 Added **40% damage reduction** while holding Sneak during the offer window (still no death save).
+
+### 🆕 Mastery Skill Tree Revamp
+
+**STR**, **WEAPON**, and **RANGE** now feature a branching skill tree from **Lv. 5** up to a **Lv. 30 Awakening**.
+
+- 🆕 **Branching Tier Choices:** At **Lv. 5, 10, 15, 20, and 25**, pick **1 of 2 styles** to climb to the next tier. Picking a node seals its rival for that tier, and completing all 5 tiers unlocks your **Lv. 30 Awakening**.
+- 🆕 **Tree Reset:** Reset all chosen nodes in a Mastery out of combat using **4–12 Vanilla XP Levels** depending on how many tiers are picked.
+- 🔺 Raised base Mastery cap bonuses for **WEAPON** and **RANGE** to **+20%**, with higher passive damage caps for late-game builds.
+
+`STR — Brawler`
+
+- 🆕 **Branch Nodes:** Iron Fists I / Flurry · Haymaker / Iron Body · Adrenaline / Pummel · Crushing Blows / Counter · Iron Fists II / Unbreakable.
+- 🆕 **Awakening — Titan Hands:** Bonus stacking unarmed damage, faster hand-mining, and **Earthshaker** (every 6th combo hit unleashes a shockwave).
+- Automatic Hand-Mining track (**Ore Breaker I/II**, **Ancient Breaker**) remains available beneath the tree.
+
+`WEAPON — Warrior`
+
+- 🆕 **Branch Nodes:** Balanced Grip I / Heavy Grip · Opening Strike / Executioner's Edge · Rooted Stance / Bloodthirst · Balanced Grip II / Sunder · Momentum / Duelist.
+- 🆕 **Awakening — Weapon Master:** **+12% melee damage**, **+5% Attack Speed**, and **Masterstroke** (5 charged hits empower your next charged hit with a heavy cleave).
+
+`RANGE — Ranger`
+
+- 🆕 **Branch Nodes:** Steady Aim / Quick Draw · Longshot I / Point-Blank Control · Piercing Shot / Hunter's Mark · Longshot II / Volley · Hunter's Finish / Kiting.
+- 🆕 **Awakening — Marksman:** **+12% ranged damage**, **+15% projectile speed**, and **Deadeye** (hold full draw still for **1.5s** to fire a guaranteed critical piercing shot).
+
+### UI, HUD & Visual Improvements
+
+- 🆕 **Ascending Mastery Tree UI:** Distinct colors for mastered paths, current choices, sealed branches, and locked tiers, with custom icons for every new Mastery passive.
+- **Cleaner Combat HUD:** Replaced bulky mid-screen banners with compact hotbar status badges, minimal crosshair cues for **Deadeye** and **Exposed**, and clean single-line trigger notices.
+- 🆕 **In-World Combat Outlines & Particles:** Crimson outline for **Limit Breaker**, Amethyst for **Exposed**, and Emerald for **Hunter's Mark**.
+- **Clearer Tooltips & Live Cooldowns:** Removed confusing abbreviations (`DR`, `CD`, `CC`, `dmg`, `8m`), added color-coded highlights for key conditions and effects, and added live **READY** / **ON COOLDOWN** timers to every Aptitude and Mastery passive with a cooldown.
+
+### Fixes & Compatibility
+
+- **Modded Combat Compatibility:** Fixed Aptitude and Mastery damage bonuses and on-hit effects being skipped when combat mods like **Mine Mine no Mi** resolve damage early on the hurt event.
+- **Modded Abilities & Spells Credit:** Modded abilities, spells, projectiles, area effects, explosions, and lightning now properly grant **Player EXP**, **Limit Breaker** progress, and **Aptitude** passive triggers (including damage-over-time kills), while **Masteries** remain focused on unarmed, melee weapon, and ranged weapon attacks.
+- **Relic System Crit Cooperation:** Kept single-roll critical handling so **Fateful Strike** and **Sol's Relic System** work together cleanly without double-rolling.
+- **Max-Level Mastery Save Persistence:** Fixed **STR**, **WEAPON**, and **RANGE** Masteries at Lv. 30 dropping back to Lv. 29 after rejoining or respawning in singleplayer and multiplayer.
+- **Tooltip Overflow & Combat Cleanup:** Fixed long tooltips overflowing off-screen, ensured Tier I & II Mastery nodes stack additively, added safeguards against sustain/stagger spam and recursive cleaves, and ensured temporary stacks/marks clear cleanly on death, logout, and dimension travel.
+
+**No world reset or player-data migration required. Existing Player EXP, aptitudes, Masteries, and custom balance datapacks remain compatible, and players can open each Mastery tree to pick their unlocked nodes right away.**
+
+## v1.0.4
+
+### Icon & UI Visual Refresh
+
+- Refreshed icons across all five **Aptitudes**, three **Combat Masteries**, and all **25 Aptitude Passives** for cleaner silhouettes and better readability across dark UI panels and custom resource packs.
+- Updated the inventory **Leveling** tab icon, **Limit Breaker** skull marker, notification badges, and passive requirement lock indicators across **1.16.5 Forge**, **1.20.1 Forge**, and **1.21.1 NeoForge**.
+
+**No player-data migration or configuration reset is required.**
+
 ## v1.0.3
 
 ### New content and progression

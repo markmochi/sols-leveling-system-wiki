@@ -6,7 +6,7 @@ The common/server configuration is generated as `solslevelingsystem-common.toml`
 
 | Setting | Default | Purpose |
 | --- | ---: | --- |
-| `longProgressionMode` | false | Restores the original Player EXP curve and all original Aptitude-rank and Player-Level passive gates. Reload datapacks or restart after changing it. |
+| `longProgressionMode` | false | Restores the original Player EXP curve and all legacy Aptitude-rank and Player-Level passive gates. Reload datapacks or restart after changing it. |
 | `playerLevelCap` | 50 | Maximum Player Level. |
 | `aptitudeCategoryCapV2` | 50 | Maximum ranks in one aptitude. |
 | `totalAptitudeBudgetV2` | 150 | Total points earned by the Player Level cap. |
@@ -18,7 +18,7 @@ The common/server configuration is generated as `solslevelingsystem-common.toml`
 
 Changing caps or the total budget can make stored allocations inconsistent with the new rules. Use the [reconciliation workflow](commands.md#safe-reconciliation) after a deliberate rules change.
 
-The balanced v1.0.3 profile is active while `longProgressionMode` is false: Player EXP uses `60 × level` and totals 73,500 at level 50. Setting it to true restores `70 × level^1.08`, 112,670 total EXP, and every original Aptitude passive gate. Switching does not reset earned EXP, allocations, Masteries, or customized requirement lists. A purchased passive that no longer meets the active gates is removed by normal reconciliation and can be claimed again for free when eligible.
+The balanced profile is active while `longProgressionMode` is false: Player EXP uses `60 × level` and totals 73,500 at level 50. Setting it to true restores `70 × level^1.08`, 112,670 total EXP, and every legacy Aptitude passive gate. Switching does not reset earned EXP, allocations, Masteries, chosen Mastery tiers, or customized requirement lists. A purchased passive that no longer meets the active gates is removed by normal reconciliation and can be claimed again for free when eligible.
 
 ## Anti-exploit defaults
 
@@ -26,13 +26,13 @@ The balanced v1.0.3 profile is active while `longProgressionMode` is false: Play
 | --- | ---: | --- |
 | `contributionWindowSeconds` | 30 | Recent-combat eligibility window. |
 | `minimumContributionFraction` | 0.05 | Normal minimum contribution; final hitters remain eligible. |
-| `allocationCombatLockSeconds` | 10 | Prevents allocation/respec during recent combat. |
+| `allocationCombatLockSeconds` | 10 | Prevents Aptitude allocation/respec and Mastery tree resets during recent combat. |
 | `respecQuoteExpirySeconds` | 15 | Time before a vanilla-XP respec quote must be refreshed. |
 | `killTokenCapacity` | 20 | Full-credit repeat budget per player and entity type. |
 | `killTokenRefillSeconds` | 15 | Time to restore one token. |
 | `depletedKillCreditFloor` | 0.10 | Ordinary kill credit after depletion. |
 | `killExperiencePerRepeatToken` | 25 | Player EXP represented by one repeat token. |
-| `highValueRepeatThreshold` | 100 | Share at which strict high-value depletion begins. |
+| `highValueRepeatThreshold` | 100 | Share at or above which strict high-value depletion begins. |
 | `highValueDepletedCreditFloor` | 0 | High-value credit after depletion. |
 | `masteryHealthPerRepeatToken` | 100 | Target health represented by one Mastery token. |
 | `masteryDepletedCreditFloor` | 0 | Mastery credit after depletion. |
@@ -56,7 +56,7 @@ Party distribution conserves the adjusted Player EXP award. It does not create e
 
 ## Passive and Limit Breaker controls
 
-The common config exposes Player Level gate lists for every aptitude passive, the final Steadfast knockback-resistance cap (80%), Guarded's minimum damage, STR hand-mining enablement and hourly award cap, Luck origin/repetition thresholds, and Limit Breaker eligibility, reward, menu, PvP, outline, whitelist, and deny-list controls.
+The common config exposes Player Level gate lists for every aptitude passive (5 entries for standard passives, **10 entries** for the five Awakenings including `memoryPlayerLevelsV3` for **Eidetic Memory**), the final Steadfast knockback-resistance cap (80%), Guarded's minimum damage, STR hand-mining enablement and hourly award cap, Luck origin/repetition thresholds, and Limit Breaker eligibility, reward, menu, PvP, outline, whitelist, and deny-list controls.
 
 When changing a gate list, keep its entry count aligned with that passive's number of ranks. Invalid data should be corrected before the world is reopened to players.
 

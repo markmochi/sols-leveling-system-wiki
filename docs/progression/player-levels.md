@@ -17,12 +17,12 @@ The EXP needed to advance from level `L` is:
 
 - Level 1 → 2 costs **60 Player EXP**.
 - Level 1 → 50 costs **73,500 Player EXP** in total.
-- This balanced curve is the v1.0.3 default and reduces the complete level-50 journey by about 35% compared with the original curve.
-- Player-Level and Aptitude-rank gates across all 25 Aptitude passives were lowered to match the faster journey.
+- This balanced curve reduces the complete level-50 journey by about 35% compared with the Long Progression curve.
+- Player-Level and Aptitude-rank gates across all 25 Aptitude passives match this default progression pace.
 
 ## Long Progression Mode
 
-Server owners who prefer the original campaign length can enable `longProgressionMode` in `solslevelingsystem-common.toml`. It restores the original `70 × L^1.08` Player EXP curve—**112,670 total EXP** to level 50—and the original Player-Level and Aptitude-rank requirements for every Aptitude passive.
+Server owners who prefer the longer campaign length can enable `longProgressionMode` in `solslevelingsystem-common.toml`. It restores the original `70 × L^1.08` Player EXP curve—**112,670 total EXP** to level 50—and the higher legacy Player-Level and Aptitude-rank requirements for every Aptitude passive (including all five 10-rank Awakenings).
 
 Changing modes does not erase Player EXP, Aptitude allocations, Masteries, or customized passive requirement lists. Existing earned Player EXP is re-read against the active curve. If the longer rules make a purchased passive temporarily ineligible, the normal rules check removes it; the passive can be claimed again for free after both legacy gates are met.
 
@@ -95,9 +95,9 @@ Player EXP belongs only to Sol's Leveling System. It is not the green vanilla ba
 | Currency | Main uses |
 |---|---|
 | Player EXP | Player Level and Aptitude entitlement |
-| Mastery EXP | STR, WEAPON, or RANGE Mastery |
-| Minecraft Experience | Enchanting, anvils, and paid Aptitude respecs; affected by INT |
+| Mastery EXP | STR, WEAPON, or RANGE Mastery levels and Skill Tree tiers (boosted by **Eidetic Memory**) |
+| Minecraft Experience | Enchanting, anvils, paid Aptitude respecs (raw XP points), and Mastery Tree resets (XP Levels); orb collection boosted by INT |
 
 ## Safe persistence
 
-Player EXP persists through normal death, logout, and dimension changes. v1.0.3 also preserves Aptitude allocations, purchased passives, Masteries, and persistent cooldowns through death and respawn; Forge retains pre-death recovery through a disconnect or server restart before respawn. The server owns all mutations and clamps progress at the active cap.
+Player EXP, Aptitude allocations, purchased passives, Masteries, chosen Mastery tiers, and persistent cooldowns survive normal death, respawn, logout, and dimension changes across all supported editions, including pre-death recovery across disconnects before respawn. The server owns all mutations and clamps progress at the active cap.

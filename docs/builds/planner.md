@@ -1,6 +1,6 @@
 # Guild Ledger
 
-Draft a build before spending vanilla XP on a respec. The ledger uses the public v1.0.3 curves, 150-point budget, aptitude caps, base bonuses, and passive gates.
+Draft a build before spending vanilla XP on a respec. The ledger uses the v1.1.0 curves, 150-point budget, aptitude caps, base bonuses, and all 150 Aptitude passive ranks (including all five 10-rank Awakenings).
 
 ## Build ledger
 
@@ -19,7 +19,7 @@ Draft a build before spending vanilla XP on a respec. The ledger uses the public
   <div class="ledger-result" data-ledger-result>Enter your planned ranks, then seal the draft.</div>
 </form>
 
-The passive count reports ranks whose two gates are met. You still claim and toggle those passives in the in-game aptitude tree.
+The passive count reports ranks whose two gates are met across all 25 Aptitude passives. You still claim and toggle those passives in the in-game aptitude tree.
 
 ## EXP ledger
 
@@ -35,4 +35,4 @@ The passive count reports ranks whose two gates are met. You still claim and tog
 </form>
 
 !!! note
-    Balanced is the v1.0.3 default. Long progression restores the original Player EXP curve and all original Aptitude passive gates. Server owners can also change caps and requirement lists, so the in-game screen remains authoritative for a customized server.
+    Balanced is the default profile. Long progression restores the original Player EXP curve and all legacy Aptitude passive gates. Server owners can also change caps and requirement lists, so the in-game screen remains authoritative for a customized server.

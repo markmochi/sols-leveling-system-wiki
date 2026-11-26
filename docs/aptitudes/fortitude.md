@@ -5,7 +5,7 @@ description: Exact Fortitude passive gates and mechanics for Steadfast, Tempered
 
 # DEF – Fortitude
 
-<div class="passive-banner"><div class="passive-banner__icon" style="background:var(--codex-blue)"><span>DEF</span></div><div><strong>The path of armor, poise, and adaptation.</strong><p>Each rank grants +0.1 Armor and +0.05 Armor Toughness. Rank 50 totals +5 Armor and +2.5 Toughness before the passive tree.</p></div></div>
+<div class="passive-banner"><div class="passive-banner__icon" style="background:var(--codex-blue)"><span>DEF</span></div><div><strong>The path of armor, poise, and adaptation.</strong><p>Each rank grants +0.1 Armor and +0.05 Armor Toughness. Rank 50 totals +5 Armor and +2.5 Toughness before Adaptation's Iron Skin bonus.</p></div></div>
 
 ## Passive roadmap
 
@@ -14,14 +14,14 @@ description: Exact Fortitude passive gates and mechanics for Steadfast, Tempered
 | Steadfast | `4/2 · 10/6 · 18/11 · 26/18 · 34/27` | +5% → +25% Knockback Resistance |
 | Tempered Armor | `8/4 · 14/8 · 22/14 · 30/21 · 38/30` | 8% → 40% less armor durability loss |
 | Guarded | `14/7 · 20/12 · 27/18 · 34/26 · 42/35` | 10% → 28% next-hit reduction; 12s → 8s recharge |
-| Last Bastion | `22/14 · 28/20 · 34/27 · 40/35 · 45/42` | 2% → 15% direct-hit reduction below 30% HP |
-| Adaptation | `32/28 · 34/30 · 36/32 · 38/34 · 40/36 · 42/38 · 44/40 · 45/42 · 46/44 · 48/46` | 3% → 13.33% per matching stack; up to 40% |
+| Last Bastion | `22/14 · 28/20 · 34/27 · 40/35 · 45/42` | 6% → 20% direct-hit reduction below 30% HP |
+| Adaptation *(Awakening)* | `32/28 · 34/30 · 36/32 · 38/34 · 40/36 · 42/38 · 44/40 · 45/42 · 46/44 · 48/46` | +0.5 → +5.0 Toughness; up to 40% resistance; dual tracking & Immunity Surge |
 
-These are the v1.0.3 balanced defaults. Long Progression Mode restores the original, higher gate pairs.
+These are the v1.1.0 balanced defaults. Long Progression Mode restores the original, higher gate pairs.
 
 ## Steadfast
 
-Levels grant +5%, +9%, +13%, +18%, or +25% Knockback Resistance while enabled. It stacks with other attribute sources, but the final result is reconciled to the server's configured cap—80% by default.
+Levels grant +5%, +9%, +13%, +18%, or +25% Knockback Resistance while enabled. It stacks with other attribute sources, reconciled to the server's configured cap—80% by default.
 
 ## Tempered Armor
 
@@ -47,39 +47,45 @@ The first qualifying direct hit after recharge receives the reduction, then begi
 
 ## Last Bastion
 
-While current health is **strictly below 30% Max HP**, eligible direct melee or projectile attacks deal 2%, 4%, 6%, 8%, or 15% less damage.
+While current health is **strictly below 30% Max HP**, eligible direct melee or projectile attacks deal **6%, 9%, 12%, 15%, or 20%** less damage.
 
-It ends immediately at 30% HP or higher. It grants no Armor and no healing. Explosions, self-damage, Poison, Wither, starvation, void, and environmental damage are excluded.
+It ends immediately at 30% HP or higher. Explosions, self-damage, Poison, Wither, starvation, void, and environmental damage are excluded.
 
-## Adaptation
+## Adaptation *(Awakening)*
 
-Adaptation tracks one broad incoming damage category: **Melee, Projectile, Explosion, Fire, or Magic**.
+Fortitude's Awakening pairs permanent Armor Toughness with reactive damage-type resistance across five broad incoming categories: **Melee, Projectile, Explosion, Fire, and Magic**.
 
-| Level | Per stack | At 3 stacks | Stack lifetime |
-|---:|---:|---:|---:|
-| 1 | 3.0% | 9.0% | 5s |
-| 2 | 3.5% | 10.5% | 5s |
-| 3 | 4.0% | 12.0% | 5s |
-| 4 | 4.5% | 13.5% | 5s |
-| 5 | 5.0% | 15.0% | 5s |
-| 6 | 5.75% | 17.25% | 5s |
-| 7 | 6.5% | 19.5% | 5s |
-| 8 | 7.5% | 22.5% | 5s |
-| 9 | 8.5% | 25.5% | 5s |
-| 10 | 13.33% | 40.0% | 10s |
+- **Iron Skin (Passive Core):** Grants **+0.5 to +5.0 permanent Armor Toughness** while Adaptation is enabled.
+- **Adaptive Stacks:** Repeated hits of the same category build up to **3 / 4 / 5 stacks** (at Lv. 1–4 / 5–9 / 10), reducing subsequent hits of that category.
+- **Milestones:**
+    - **Lv. 5:** Maximum stacks increase to **4**, and stack lifetime extends to **7s**.
+    - **Lv. 7:** Tracks **two damage categories simultaneously** instead of replacing your active category when hit by a second type.
+    - **Lv. 10:** Maximum stacks increase to **5** (**10s** lifetime, **40%** total resistance) and unlocks **Immunity Surge**—reaching 5 stacks fully negates the next hit of that category within **3 seconds** (**20s** cooldown per category).
 
-The first matching hit is not reduced; it creates stack 1 after damage. Later matching hits use existing stacks. At most one stack is added every 0.75 seconds. A matching hit refreshes expiry, while a different category replaces the old adaptation and begins again at one stack.
+| Level | Iron Skin Toughness | Per stack | Max stacks | Max resistance | Categories tracked | Stack lifetime |
+|---:|---:|---:|---:|---:|---:|---:|
+| 1 | +0.5 | 4.0% | 3 | 12.0% | 1 | 5s |
+| 2 | +1.0 | 4.5% | 3 | 13.5% | 1 | 5s |
+| 3 | +1.5 | 5.0% | 3 | 15.0% | 1 | 5s |
+| 4 | +2.0 | 5.5% | 3 | 16.5% | 1 | 5s |
+| 5 | +2.5 | 6.0% | 4 | 24.0% | 1 | 7s |
+| 6 | +3.0 | 6.5% | 4 | 26.0% | 1 | 7s |
+| 7 | +3.5 | 7.0% | 4 | 28.0% | 2 | 7s |
+| 8 | +4.0 | 7.5% | 4 | 30.0% | 2 | 7s |
+| 9 | +4.5 | 8.0% | 4 | 32.0% | 2 | 7s |
+| 10 | +5.0 | 8.0% | 5 | 40.0% *(+ Immunity Surge)* | 2 | 10s |
+
+The first matching hit is not reduced; it creates stack 1 after damage. Later matching hits use existing stacks. At most one stack is added every 0.75 seconds, and matching hits refresh expiry.
 
 Environmental hazards, damage-over-time effects, falls, void, `/kill`, self-damage, and attacks from your own summoned creatures do not build stacks.
 
 ## Competing direct-hit defenses
 
-Guarded, Last Bastion, and Adaptation do **not** multiply. When several can affect the same hit, the strongest single reduction is used, capped at 40%. Build for coverage and uptime rather than expecting three percentages to stack into invulnerability.
+Guarded, Last Bastion, and Adaptation's percentage resistance do **not** multiply. When several can affect the same hit, the strongest single reduction is used, capped at 40% (unless Lv. 10 Immunity Surge negates the hit outright). Iron Skin's Armor Toughness always applies through your armor calculation.
 
 ## Build notes
 
 - Steadfast begins early and is useful for melee, shields, bows, and narrow arenas.
-- Tempered Armor is long-term economy, not immediate damage reduction.
-- Guarded favors spaced heavy hits; rapid attacks repeatedly restart its recharge.
-- Last Bastion covers pressure at low HP but does not replace Vitality's lethal protection.
-- Adaptation is the deep specialist reward for repeated, readable damage types.
+- Tempered Armor is long-term economy, especially valuable in modded boss campaigns with heavy durability drain.
+- Guarded favors spaced heavy hits; Last Bastion covers sustained pressure below 30% HP.
+- Adaptation at Lv. 7–10 excels in boss encounters that mix melee swings with projectiles or magic.

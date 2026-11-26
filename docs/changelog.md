@@ -83,15 +83,6 @@ Every Aptitude's final passive is now a full 10-level **Awakening** with passive
 
 **No world reset or player-data migration required. Existing Player EXP, aptitudes, Masteries, and custom balance datapacks remain compatible, and players can open each Mastery tree to pick their unlocked nodes right away.**
 
-## v1.0.4
-
-### Icon & UI Visual Refresh
-
-- Refreshed icons across all five **Aptitudes**, three **Combat Masteries**, and all **25 Aptitude Passives** for cleaner silhouettes and better readability across dark UI panels and custom resource packs.
-- Updated the inventory **Leveling** tab icon, **Limit Breaker** skull marker, notification badges, and passive requirement lock indicators across **1.16.5 Forge**, **1.20.1 Forge**, and **1.21.1 NeoForge**.
-
-**No player-data migration or configuration reset is required.**
-
 ## v1.0.3
 
 ### New content and progression
